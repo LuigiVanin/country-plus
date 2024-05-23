@@ -3,6 +3,7 @@ import type { _maxHeight } from "#tailwind-config/theme";
 
 type CountryTableProps = {
   countries?: Country[] | null;
+  targetLang?: string;
   loading: boolean;
 };
 
@@ -29,7 +30,7 @@ const countryRows = computed(() => {
     return {
       name: country.name.official || country.name.official,
       flag: country.flags.svg,
-      capital: country.capital[0] || "no capital",
+      capital: country.capital?.[0] || "No capital",
       languages: Object.values(country.languages),
       subregion: country.subregion,
       link: country.maps.googleMaps,
@@ -60,7 +61,7 @@ const contryTableColumns = [
   },
   {
     key: "link",
-    label: "Google Maps",
+    label: "Maps",
   },
 ];
 
@@ -83,23 +84,30 @@ const pageCount = 10;
       }"
     >
       <template #name-data="{ row }">
-        <span class="flex items-center gap-2">
-          <h1>
-            {{ row.name }}
-          </h1>
-          <NuxtImg :src="row.flag" class="h-3" />
-        </span>
+        <UTooltip :text="`${row.name} - go to GoogleMaps`" class="">
+          <a
+            class="hover:text-primary flex max-w-60 items-center gap-2 underline-offset-4 hover:underline"
+            :href="row.link"
+            target="_blank"
+          >
+            <h1 class="overflow-hidden text-ellipsis">
+              {{ row.name }}
+            </h1>
+            <NuxtImg :src="row.flag" class="mt-1 h-3" />
+          </a>
+        </UTooltip>
       </template>
 
       <template #languages-data="{ row }">
-        <div class="flex flex-row gap-1">
+        <div class="flex w-40 flex-row flex-wrap gap-1">
           <UBadge
             v-for="lang in row.languages"
             :key="lang"
+            :color="lang === props.targetLang ? 'green' : 'primary'"
             role="button"
             variant="subtle"
             class="cursor-pointer hover:opacity-50"
-            @click="router.push(`/language/${lang}`)"
+            @click="router.push(`/countries/language/${lang}`)"
           >
             {{ lang }}
           </UBadge>

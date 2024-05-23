@@ -9,6 +9,8 @@ type Schema = {
   bairro?: string | undefined;
   location?: string | undefined;
   city?: string | undefined;
+  birthday: string;
+  salary: number;
 };
 
 const props = defineProps<{
@@ -52,8 +54,14 @@ const confirmForm = () => {
       </template>
 
       <div class="flex flex-col gap-3 p-0">
-        <p><strong>Name:</strong> {{ props.formData.fullname }}</p>
-        <p><strong>CPF:</strong> {{ props.formData.cpf }}</p>
+        <div class="flex flex-row gap-3">
+          <p><strong>Name:</strong> {{ props.formData.fullname }}</p>
+          <p><strong>CPF:</strong> {{ props.formData.cpf }}</p>
+        </div>
+        <p>
+          <strong class="mr-2">Birthday:</strong>
+          {{ props.formData.birthday }}
+        </p>
         <p>
           <strong class="mr-2">Type:</strong>
           <UBadge variant="subtle" color="green" class="capitalize">
@@ -65,6 +73,16 @@ const confirmForm = () => {
           <UBadge variant="subtle" class="capitalize">
             {{ props.formData.race }}
           </UBadge>
+        </p>
+
+        <p>
+          <strong class="mr-2">Mountly Income:</strong>
+          {{
+            props.formData.salary.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })
+          }}
         </p>
 
         <p><strong class="mr-2">CEP:</strong> {{ props.formData.cep }}</p>

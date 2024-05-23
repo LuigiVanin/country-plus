@@ -3,7 +3,7 @@ import CountryTable from "~/components/CountryTable.vue";
 import { countryService } from "~/services/country-service";
 
 const { pending, data } = useAsyncData(
-  // "region/americas", // NOTE: Temporarily disabling caching -
+  "region/americas", // NOTE: Temporarily disabling caching -
   () => countryService.fetchContriesFromAmericas(),
   {
     immediate: true,

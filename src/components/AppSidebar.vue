@@ -19,21 +19,20 @@ const { sidebar, toggleSidebar } = useSidebar();
         />
       </button>
 
-      <ul class="flex w-full flex-col items-center gap-3 pt-4">
+      <ul class="flex h-full w-full flex-col items-center gap-3 pb-2 pt-4">
         <li class="w-full px-1">
           <UTooltip text="Countries List" :popper="{ placement: 'right' }">
-            <UButton icon="i-heroicons-home" color="gray" variant="ghost">
+            <UButton
+              icon="i-heroicons-home"
+              color="gray"
+              variant="ghost"
+              to="/"
+            >
               {{ sidebar ? "Home" : undefined }}
             </UButton>
           </UTooltip>
         </li>
-        <li class="w-full px-1">
-          <UTooltip text="Create New Item" :popper="{ placement: 'right' }">
-            <UButton icon="i-heroicons-plus" color="gray" variant="ghost">
-              {{ sidebar ? "New Item" : undefined }}
-            </UButton>
-          </UTooltip>
-        </li>
+
         <li class="w-full px-1">
           <UTooltip
             text="Search country by name"
@@ -43,16 +42,37 @@ const { sidebar, toggleSidebar } = useSidebar();
               icon="i-heroicons-magnifying-glass"
               color="gray"
               variant="ghost"
+              to="/countries/search/"
             >
               {{ sidebar ? "Search" : undefined }}
             </UButton>
           </UTooltip>
         </li>
-        <!-- <li class="w-full px-1">
-          <UButton icon="i-ion-logo-github" color="gray" variant="ghost">
+        <li class="w-full px-1">
+          <UTooltip text="Create New Item" :popper="{ placement: 'right' }">
+            <UButton
+              icon="i-heroicons-plus"
+              color="gray"
+              variant="ghost"
+              to="/new-item/"
+            >
+              {{ sidebar ? "New Item" : undefined }}
+            </UButton>
+          </UTooltip>
+        </li>
+        <div class="spacer mt-auto flex-1" />
+        <li class="w-full px-1">
+          <UButton
+            dynamic
+            color="gray"
+            variant="ghost"
+            to="https://github.com/LuigiVanin/country-plus"
+            target="_blank"
+          >
+            <UIcon name="i-ion-logo-github" dynamic class="h-5 w-5" />
             {{ sidebar ? "Github" : undefined }}
           </UButton>
-        </li> -->
+        </li>
       </ul>
     </aside>
   </ClientOnly>

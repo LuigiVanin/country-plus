@@ -37,6 +37,21 @@ const schema = z.object({
   type: z.enum(["cat", "dog"], {
     message: "Invalid type, it must be Dog or Cat",
   }),
+  birthday: z
+    .string()
+    .regex(/^\d{2}\/\d{2}\/\d{4}$/, {
+      message: "Birthday must be in the format DD/MM/YYYY",
+    })
+    .refine(
+      (val) => {
+        const [day, month, year] = val.split("/").map(Number);
+        const date = new Date(year, month - 1, day);
+        const now = new Date();
+        const diff = now.getFullYear() - date.getFullYear();
+        return diff >= 17 && diff <= 65;
+      },
+      { message: "The date must be between 18 and 65 years" },
+    ),
   race: z.string().refine(
     (val) => {
       if (form.type === "cat") {
@@ -52,22 +67,29 @@ const schema = z.object({
   bairro: z.string().optional(),
   location: z.string().optional(),
   city: z.string().optional(),
+  salary: z.number().min(1000),
 });
 
 type Schema = z.output<typeof schema>;
 
 const form = reactive<Schema>({
   fullname: "",
+  birthday: "",
   cpf: "",
   type: "dog",
   race: dogRaces[0]!,
   cep: "",
   uf: "",
   bairro: "",
+  salary: 1000,
 });
 
-const onSubmit = (event: FormSubmitEvent<Schema>) => {
-  console.log("Submit", event);
+const onSubmit = async (event: FormSubmitEvent<Schema>) => {
+  if (!form.uf || !form.bairro || !form.location || !form.city) {
+    try {
+      await onCpfSubmit();
+    } catch (e) {}
+  }
   confirmationModalisOpen.value = true;
 };
 
@@ -80,7 +102,7 @@ const onCpfSubmit = async () => {
     form.bairro = address.bairro;
     form.location = address.logradouro;
     form.city = address.localidade;
-    console.log(address);
+
     toast.add({
       title: "CEP founded",
       timeout: 3000,
@@ -102,13 +124,13 @@ const onCpfSubmit = async () => {
 <template>
   <UContainer class="!px-0">
     <PageTitle>
+      <h1 class="text-xl font-semibold">Create New Item</h1>
       <UButton
         label="Back"
         variant="link"
         icon="i-heroicons-arrow-left"
         to="/"
       />
-      <h1 class="text-xl font-semibold">Create New Item</h1>
     </PageTitle>
     <UForm
       :schema="schema"
@@ -121,14 +143,24 @@ const onCpfSubmit = async () => {
         <UInput v-model="form.fullname" type="text" />
       </UFormGroup>
 
-      <UFormGroup label="CPF" name="cpf">
-        <UInput
-          v-model="form.cpf"
-          type="text"
-          v-maska
-          data-maska="###.###.###-##"
-        />
-      </UFormGroup>
+      <div class="flex w-full flex-row gap-4">
+        <UFormGroup label="CPF" name="cpf" class="flex-1">
+          <UInput
+            v-model="form.cpf"
+            type="text"
+            v-maska
+            data-maska="###.###.###-##"
+          />
+        </UFormGroup>
+        <UFormGroup label="Birthday" name="birthday" class="flex-1">
+          <UInput
+            v-model="form.birthday"
+            type="text"
+            v-maska
+            data-maska="##/##/####"
+          />
+        </UFormGroup>
+      </div>
 
       <UFormGroup label="Espécia" name="type">
         <USelect
@@ -150,6 +182,14 @@ const onCpfSubmit = async () => {
           v-model="form.race"
           :options="form.type === 'cat' ? catRaces : dogRaces"
         />
+      </UFormGroup>
+
+      <UFormGroup label="Mountly Icome" name="salary">
+        <UInput v-model="form.salary" type="number">
+          <template #leading>
+            <span class="font-bold text-gray-500">R$</span>
+          </template>
+        </UInput>
       </UFormGroup>
 
       <UFormGroup label="CEP" name="cep">

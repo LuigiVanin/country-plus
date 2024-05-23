@@ -3,7 +3,7 @@ type Country = {
     official: string;
     common: string;
   };
-  capital: string[];
+  capital?: string[];
   maps: {
     googleMaps: string;
     openStreetMaps: string;
