@@ -17,4 +17,8 @@ type Country = {
     alt: string;
   };
   subregion: string;
+  region: string;
+  independent: boolean;
+  area: number;
+  population: number;
 };

@@ -9,7 +9,7 @@ const { sidebar, toggleSidebar } = useSidebar();
       :class="{ 'w-12': !sidebar, 'w-36': sidebar }"
     >
       <button
-        class="absolute -right-3 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-slate-50 shadow-md hover:bg-slate-200 dark:bg-gray-900 dark:hover:bg-gray-700"
+        class="absolute -right-3 top-1 hidden h-6 w-6 items-center justify-center rounded-full bg-slate-50 shadow-md hover:bg-slate-200 md:flex dark:bg-gray-700 dark:hover:bg-gray-800"
         @click="toggleSidebar"
       >
         <UIcon
@@ -62,16 +62,21 @@ const { sidebar, toggleSidebar } = useSidebar();
         </li>
         <div class="spacer mt-auto flex-1" />
         <li class="w-full px-1">
-          <UButton
-            dynamic
-            color="gray"
-            variant="ghost"
-            to="https://github.com/LuigiVanin/country-plus"
-            target="_blank"
+          <UTooltip
+            text="Repositório do projeto no Github"
+            :popper="{ placement: 'right' }"
           >
-            <UIcon name="i-ion-logo-github" dynamic class="h-5 w-5" />
-            {{ sidebar ? "Github" : undefined }}
-          </UButton>
+            <UButton
+              dynamic
+              color="gray"
+              variant="ghost"
+              to="https://github.com/LuigiVanin/country-plus"
+              target="_blank"
+            >
+              <UIcon name="i-ion-logo-github" dynamic class="h-5 w-5" />
+              {{ sidebar ? "Github" : undefined }}
+            </UButton>
+          </UTooltip>
         </li>
       </ul>
     </aside>

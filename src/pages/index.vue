@@ -21,7 +21,7 @@ const tableColumns = [
 <template>
   <PageTitle>
     <div class="flex items-center gap-2">
-      <h1 class="text-lg font-semibold">Countries List</h1>
+      <h1 class="text-lg font-semibold">Countries</h1>
       <UIcon name="i-heroicons-chevron-right" />
       <UBadge variant="subtle" size="lg">Americas</UBadge>
     </div>

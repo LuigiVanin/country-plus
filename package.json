@@ -15,8 +15,11 @@
     "@nuxt/ui": "^2.16.0",
     "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/nuxt": "^10.9.0",
     "maska": "^2.1.11",
     "nuxt": "^3.11.2",
+    "tailwind-merge": "^2.3.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "zod": "^3.23.8"

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import ScrollTopButton from "~/components/App/ScrollTopButton.vue";
+
 const { sidebar } = useSidebar();
 </script>
 <template>
@@ -13,5 +15,6 @@ const { sidebar } = useSidebar();
       </UContainer>
     </main>
     <UNotifications />
+    <ScrollTopButton />
   </div>
 </template>

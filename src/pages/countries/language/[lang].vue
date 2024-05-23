@@ -39,6 +39,12 @@ watchEffect(() => {
       <UIcon name="i-heroicons-chevron-right" />
       <UBadge variant="subtle" size="lg">{{ route.params.lang }}</UBadge>
     </div>
+    <UButton
+      label="Back"
+      variant="link"
+      icon="i-heroicons-arrow-left"
+      @click="router.go(-1)"
+    />
   </PageTitle>
   <CountryTable
     :countries="data"

@@ -18,7 +18,18 @@ export const fetchCountriesByLang = async (lang: string) => {
   return countries as Country[];
 };
 
+export const searchCountriesByName = async (search: string) => {
+  search = search.toLowerCase();
+
+  const countries = await $fetch(`${RESTCOUNTRY_BASE_URL}/name/${search}`, {
+    method: "GET",
+  });
+
+  return countries as Country[];
+};
+
 export const countryService = {
   fetchContriesFromAmericas,
   fetchCountriesByLang,
+  searchCountriesByName,
 };
