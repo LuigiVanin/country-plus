@@ -8,7 +8,13 @@ const { isDark, toggleTheme } = useTheme();
     <div
       class="mx-auto flex w-full max-w-[1440px] items-center justify-between !px-0"
     >
-      <h1 class="text-lg font-bold">Country+</h1>
+      <h1 class="flex items-center gap-1 text-lg font-bold">
+        <UIcon
+          name="i-heroicons-globe-europe-africa mb-[1px]"
+          class="h-6 w-6"
+        />
+        <span> Country+ </span>
+      </h1>
 
       <ClientOnly>
         <UButton

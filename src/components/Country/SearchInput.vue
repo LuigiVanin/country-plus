@@ -25,7 +25,7 @@ const schema = z.object({
     <UFormGroup name="modelValue">
       <UButtonGroup
         orientation="horizontal"
-        class="country-search-group shadow-md shadow-indigo-400 transition-all duration-200"
+        class="country-search-group shadow-md shadow-indigo-200 transition-all duration-200 dark:shadow-indigo-900"
       >
         <UInput
           type="text"
