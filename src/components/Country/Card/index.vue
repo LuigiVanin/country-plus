@@ -20,7 +20,7 @@ const props = defineProps<CountryItemProps>();
 
 <template>
   <UCard
-    :class="twMerge(props.class || '', 'relative')"
+    :class="twMerge(props.class || '', 'relative bg-white dark:bg-zinc-900')"
     :ui="{
       shadow: 'shadow-md',
       ring: 'dark:ring-gray-600',

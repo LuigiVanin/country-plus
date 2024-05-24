@@ -1,0 +1,756 @@
+[
+  {
+    "name": {
+      "common": "United States",
+      "official": "United States of America",
+      "nativeName": {
+        "eng": {
+          "official": "United States of America",
+          "common": "United States"
+        }
+      }
+    },
+    "tld": [
+      ".us"
+    ],
+    "cioc": "USA",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+1" 
+    },
+    "capital": [
+      "Washington, D.C."
+    ],
+    "region": "Americas",
+    "subregion": "North America",
+    "languages": {
+      "eng": "English"
+    },
+   
+    "latlng": [
+      38,
+      -97
+    ],
+    "landlocked": false,
+    "borders": [
+      "CAN",
+      "MEX"
+    ],
+    "area": 9372610,
+    "demonyms": {
+      "eng": {
+        "f": "American",
+        "m": "American"
+      },
+      "fra": {
+        "f": "Américaine",
+        "m": "Américain"
+      }
+    },
+    "flag": "🇺🇸",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/e8M246zY4BSjkjAv6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/148838#map=2/20.6/-85.8"
+    },
+    "population": 329484123,
+    "gini": {
+      "2018": 41.4
+    },
+    "fifa": "USA",
+    "car": {
+      "signs": [
+        "USA"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-12:00",
+      "UTC-11:00",
+      "UTC-10:00",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC+10:00",
+      "UTC+12:00"
+    ],
+    "continents": [
+      "North America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/us.png",
+      "svg": "https://flagcdn.com/us.svg",
+      "alt": "The flag of the United States of America is composed of thirteen equal horizontal bands of red alternating with white. A blue rectangle, bearing fifty small five-pointed white stars arranged in nine rows where rows of six stars alternate with rows of five stars, is superimposed in the canton."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/us.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/us.svg"
+    },
+    "startOfWeek": "sunday",
+    "capitalInfo": {
+      "latlng": [
+        38.89,
+        -77.05
+      ]
+    },
+    "postalCode": {
+      "format": "#####-####",
+      "regex": "^\\d{5}(-\\d{4})?$"
+    }
+  },
+  {
+    "name": {
+      "common": "Caribbean Netherlands",
+      "official": "Bonaire, Sint Eustatius and Saba",
+      "nativeName": {
+        "nld": {
+          "official": "Bonaire, Sint Eustatius en Saba",
+          "common": "Caribisch Nederland"
+        },
+        "pap": {
+          "official": "Boneiru, Sint Eustatius y Saba",
+          "common": "Boneiru, Sint Eustatius y Saba"
+        }
+      }
+    },
+    "tld": [
+      ".bq",
+      ".nl"
+    ],
+    "independent": false,
+    "status": "officially-assigned",
+    "unMember": false,
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+5",
+      "suffixes": [
+        "99"
+      ]
+    },
+    "capital": [
+      "Kralendijk"
+    ],
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "languages": {
+      "eng": "English",
+      "nld": "Dutch",
+      "pap": "Papiamento"
+    },
+    
+    "latlng": [
+      12.18,
+      -68.25
+    ],
+    "landlocked": false,
+    "area": 328,
+    "demonyms": {
+      "eng": {
+        "f": "Dutch",
+        "m": "Dutch"
+      },
+      "fra": {
+        "f": "Néerlandaise",
+        "m": "Néerlandais"
+      }
+    },
+    "flag": "🇧🇶",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/4XVes1P6uEDTz77WA",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1216720"
+    },
+    "population": 25987,
+    "car": {
+      "signs": [
+        ""
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-04:00"
+    ],
+    "continents": [
+      "North America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/bq.png",
+      "svg": "https://flagcdn.com/bq.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/bq.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/bq.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        12.14,
+        -68.27
+      ]
+    }
+  },
+  {
+    "name": {
+      "common": "Brazil",
+      "official": "Federative Republic of Brazil",
+      "nativeName": {
+        "por": {
+          "official": "República Federativa do Brasil",
+          "common": "Brasil"
+        }
+      }
+    },
+    "tld": [
+      ".br"
+    ],
+    "cioc": "BRA",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "BRL": {
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    },
+    "idd": {
+      "root": "+5",
+      "suffixes": [
+        "5"
+      ]
+    },
+    "capital": [
+      "Brasília"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "languages": {
+      "por": "Portuguese"
+    },
+    
+    "latlng": [
+      -10,
+      -55
+    ],
+    "landlocked": false,
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "GUF",
+      "GUY",
+      "PRY",
+      "PER",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "area": 8515767,
+    "demonyms": {
+      "eng": {
+        "f": "Brazilian",
+        "m": "Brazilian"
+      },
+      "fra": {
+        "f": "Brésilienne",
+        "m": "Brésilien"
+      }
+    },
+    "flag": "🇧🇷",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/waCKk21HeeqFzkNC9",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
+    },
+    "population": 212559409,
+    "gini": {
+      "2019": 53.4
+    },
+    "fifa": "BRA",
+    "car": {
+      "signs": [
+        "BR"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00"
+    ],
+    "continents": [
+      "South America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/br.png",
+      "svg": "https://flagcdn.com/br.svg",
+      "alt": "The flag of Brazil has a green field with a large yellow rhombus in the center. Within the rhombus is a dark blue globe with twenty-seven small five-pointed white stars depicting a starry sky and a thin white convex horizontal band inscribed with the national motto 'Ordem e Progresso' across its center."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/br.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -15.79,
+        -47.88
+      ]
+    },
+    "postalCode": {
+      "format": "#####-###",
+      "regex": "^(\\d{8})$"
+    }
+  },
+  {
+    "name": {
+      "common": "Argentina",
+      "official": "Argentine Republic",
+      "nativeName": {
+        "grn": {
+          "official": "Argentine Republic",
+          "common": "Argentina"
+        },
+        "spa": {
+          "official": "República Argentina",
+          "common": "Argentina"
+        }
+      }
+    },
+    "tld": [
+      ".ar"
+    ],
+    "cca2": "AR",
+    "ccn3": "032",
+    "cca3": "ARG",
+    "cioc": "ARG",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "ARS": {
+        "name": "Argentine peso",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+5",
+      "suffixes": [
+        "4"
+      ]
+    },
+    "capital": [
+      "Buenos Aires"
+    ],
+    "altSpellings": [
+      "AR",
+      "Argentine Republic",
+      "República Argentina"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "languages": {
+      "grn": "Guaraní",
+      "spa": "Spanish"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية الأرجنتين",
+        "common": "الأرجنتين"
+      },
+      "bre": {
+        "official": "Republik Arc'hantina",
+        "common": "Arc'hantina"
+      },
+      "ces": {
+        "official": "Argentinská republika",
+        "common": "Argentina"
+      },
+      "cym": {
+        "official": "Gweriniaeth yr Ariannin",
+        "common": "Ariannin"
+      },
+      "deu": {
+        "official": "Argentinische Republik",
+        "common": "Argentinien"
+      },
+      "est": {
+        "official": "Argentina Vabariik",
+        "common": "Argentina"
+      },
+      "fin": {
+        "official": "Argentiinan tasavalta",
+        "common": "Argentiina"
+      },
+      "fra": {
+        "official": "République argentine",
+        "common": "Argentine"
+      },
+      "hrv": {
+        "official": "Argentinski Republika",
+        "common": "Argentina"
+      },
+      "hun": {
+        "official": "Argentin Köztársaság",
+        "common": "Argentína"
+      },
+      "ita": {
+        "official": "Repubblica Argentina",
+        "common": "Argentina"
+      },
+      "jpn": {
+        "official": "アルゼンチン共和国",
+        "common": "アルゼンチン"
+      },
+      "kor": {
+        "official": "아르헨티나 공화국",
+        "common": "아르헨티나"
+      },
+      "nld": {
+        "official": "Argentijnse Republiek",
+        "common": "Argentinië"
+      },
+      "per": {
+        "official": "جمهوری آرژانتین",
+        "common": "آرژانتین"
+      },
+      "pol": {
+        "official": "Republika Argentyńska",
+        "common": "Argentyna"
+      },
+      "por": {
+        "official": "República Argentina",
+        "common": "Argentina"
+      },
+      "rus": {
+        "official": "Аргентинская Республика",
+        "common": "Аргентина"
+      },
+      "slk": {
+        "official": "Argentínska republika",
+        "common": "Argentína"
+      },
+      "spa": {
+        "official": "República Argentina",
+        "common": "Argentina"
+      },
+      "srp": {
+        "official": "Аргентинска Република",
+        "common": "Аргентина"
+      },
+      "swe": {
+        "official": "Republiken Argentina",
+        "common": "Argentina"
+      },
+      "tur": {
+        "official": "Arjantin Cumhuriyeti",
+        "common": "Arjantin"
+      },
+      "urd": {
+        "official": "جمہوریہ ارجنٹائن",
+        "common": "ارجنٹائن"
+      },
+      "zho": {
+        "official": "阿根廷共和国",
+        "common": "阿根廷"
+      }
+    },
+    "latlng": [
+      -34,
+      -64
+    ],
+    "landlocked": false,
+    "borders": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "PRY",
+      "URY"
+    ],
+    "area": 2780400,
+    "demonyms": {
+      "eng": {
+        "f": "Argentine",
+        "m": "Argentine"
+      },
+      "fra": {
+        "f": "Argentine",
+        "m": "Argentin"
+      }
+    },
+    "flag": "🇦🇷",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/Z9DXNxhf2o93kvyc6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/286393"
+    },
+    "population": 45376763,
+    "gini": {
+      "2019": 42.9
+    },
+    "fifa": "ARG",
+    "car": {
+      "signs": [
+        "RA"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-03:00"
+    ],
+    "continents": [
+      "South America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ar.png",
+      "svg": "https://flagcdn.com/ar.svg",
+      "alt": "The flag of Argentina features three equal horizontal bands of light blue, white and light blue. A brown-edged golden sun is centered in the white band."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/ar.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/ar.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -34.58,
+        -58.67
+      ]
+    },
+    "postalCode": {
+      "format": "@####@@@",
+      "regex": "^([A-Z]\\d{4}[A-Z]{3})$"
+    }
+  },
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Canada",
+      "nativeName": {
+        "eng": {
+          "official": "Canada",
+          "common": "Canada"
+        },
+        "fra": {
+          "official": "Canada",
+          "common": "Canada"
+        }
+      }
+    },
+    "tld": [
+      ".ca"
+    ],
+    "cca2": "CA",
+    "ccn3": "124",
+    "cca3": "CAN",
+    "cioc": "CAN",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "CAD": {
+        "name": "Canadian dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+1",
+      "suffixes": [
+        ""
+      ]
+    },
+    "capital": [
+      "Ottawa"
+    ],
+    "altSpellings": [
+      "CA"
+    ],
+    "region": "Americas",
+    "subregion": "North America",
+    "languages": {
+      "eng": "English",
+      "fra": "French"
+    },
+    "translations": {
+      "ara": {
+        "official": "كندا",
+        "common": "كندا"
+      },
+      "bre": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "ces": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "cym": {
+        "official": "Canada",
+        "common": "Canada"
+      },
+      "deu": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "est": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "fin": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "fra": {
+        "official": "Canada",
+        "common": "Canada"
+      },
+      "hrv": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "hun": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "ita": {
+        "official": "Canada",
+        "common": "Canada"
+      },
+      "jpn": {
+        "official": "カナダ",
+        "common": "カナダ"
+      },
+      "kor": {
+        "official": "캐나다",
+        "common": "캐나다"
+      },
+      "nld": {
+        "official": "Canada",
+        "common": "Canada"
+      },
+      "per": {
+        "official": "کانادا",
+        "common": "کانادا"
+      },
+      "pol": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "por": {
+        "official": "Canadá",
+        "common": "Canadá"
+      },
+      "rus": {
+        "official": "Канада",
+        "common": "Канада"
+      },
+      "slk": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "spa": {
+        "official": "Canadá",
+        "common": "Canadá"
+      },
+      "srp": {
+        "official": "Канада",
+        "common": "Канада"
+      },
+      "swe": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "tur": {
+        "official": "Kanada",
+        "common": "Kanada"
+      },
+      "urd": {
+        "official": "کینیڈا",
+        "common": "کینیڈا"
+      },
+      "zho": {
+        "official": "加拿大",
+        "common": "加拿大"
+      }
+    },
+    "latlng": [
+      60,
+      -95
+    ],
+    "landlocked": false,
+    "borders": [
+      "USA"
+    ],
+    "area": 9984670,
+    "demonyms": {
+      "eng": {
+        "f": "Canadian",
+        "m": "Canadian"
+      },
+      "fra": {
+        "f": "Canadienne",
+        "m": "Canadien"
+      }
+    },
+    "flag": "🇨🇦",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/jmEVLugreeqiZXxbA",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1428125"
+    },
+    "population": 38005238,
+    "gini": {
+      "2017": 33.3
+    },
+    "fifa": "CAN",
+    "car": {
+      "signs": [
+        "CDN"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:30"
+    ],
+    "continents": [
+      "North America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ca.png",
+      "svg": "https://flagcdn.com/ca.svg",
+      "alt": "The flag of Canada is composed of a red vertical band on the hoist and fly sides and a central white square that is twice the width of the vertical bands. A large eleven-pointed red maple leaf is centered in the white square."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/ca.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/ca.svg"
+    },
+    "startOfWeek": "sunday",
+    "capitalInfo": {
+      "latlng": [
+        45.42,
+        -75.7
+      ]
+    },
+    "postalCode": {
+      "format": "@#@ #@#",
+      "regex": "^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$"
+    }
+  }
+]

@@ -7,6 +7,19 @@ export default defineNuxtConfig({
       RESTCOUNTRY_BASE_URL: process.env.RESTCOUNTRY_BASE_URL,
     },
   },
+  app: {
+    head: {
+      charset: "utf-8",
+      title: "Country+ | Find your country",
+      link: [
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "favicon.ico",
+        },
+      ],
+    },
+  },
   srcDir: "src/",
   modules: ["@nuxtjs/color-mode", "@nuxt/ui", "@nuxt/image", "@vueuse/nuxt"],
   postcss: {

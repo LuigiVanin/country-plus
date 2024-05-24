@@ -2,7 +2,7 @@
 import { twMerge } from "tailwind-merge";
 
 type CountryListProps = {
-  countries?: Country[];
+  countries?: Country[] | null;
   class?: string;
   loading?: boolean;
 };

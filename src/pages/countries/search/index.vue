@@ -1,20 +1,21 @@
 <script lang="ts" setup>
-import { countryService } from "~/services/country-service";
+import { useSearchCountryByName } from "~/composables/api/useSearchCountriesByName";
 
 const router = useRouter();
 const search = ref("");
 const toast = useToast();
 
-const { data, execute, clear, status, error } = useAsyncData(
-  () => countryService.searchCountriesByName(search.value),
-  {
-    immediate: false,
-  },
-);
+const {
+  search: searchCountries,
+  clear,
+  status,
+  error,
+  countries,
+} = useSearchCountryByName(search);
 
 const handleSearch = async () => {
   clear();
-  await execute();
+  await searchCountries();
   if (error.value && status.value !== "success") {
     toast.add({
       icon: "i-heroicons-archive-box-x-mark",
@@ -52,7 +53,7 @@ const handleSearch = async () => {
       :loading="status === 'pending'"
       @submit="handleSearch"
     />
-    <CountryList :countries="data" :loading="status === 'pending'">
+    <CountryList :countries="countries" :loading="status === 'pending'">
       <template #default="{ country }">
         <CountryCard :data="country" />
       </template>

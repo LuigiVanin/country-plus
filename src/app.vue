@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 onMounted(() => {
-  console.log("TESTE");
+  if (process.env.NODE_ENV === "development") {
+    console.info("Starting the app...");
+  }
 });
 </script>
 
@@ -9,7 +11,3 @@ onMounted(() => {
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style lang="scss">
-// @import "./assets/scss/main.scss";
-</style>

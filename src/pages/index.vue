@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import CountryTable from "~/components/CountryTable.vue";
 import { useFetchCountriesFromAmerica } from "~/composables/api/useFetchCountriesFromAmerica";
 
 const { pending, countries } = useFetchCountriesFromAmerica();

@@ -5,7 +5,7 @@ const { sidebar, toggleSidebar } = useSidebar();
 <template>
   <ClientOnly>
     <aside
-      class="fixed bottom-0 left-0 top-12 z-50 flex w-12 flex-col items-center border-r-[1px] border-solid border-gray-200 pt-4 transition-all duration-300 ease-in-out dark:border-gray-700"
+      class="fixed bottom-0 left-0 top-12 z-50 flex w-12 flex-col items-center border-r-[1px] border-solid border-gray-200 bg-white pt-4 transition-all duration-300 ease-in-out dark:border-gray-700 dark:bg-zinc-900"
       :class="{ 'w-12': !sidebar, 'w-36': sidebar }"
     >
       <button

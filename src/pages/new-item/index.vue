@@ -315,7 +315,7 @@ watchEffect(() => {
       </UContainer>
     </UForm>
 
-    <ConfirmationModal v-model="confirmationModalisOpen" :form-data="form" />
+    <ModalConfirmation v-model="confirmationModalisOpen" :form-data="form" />
     <ModalOtherAnimal
       v-model="modalOtherAnimalIsOpen"
       @confirm-breed-name="confirmOtherBreed"

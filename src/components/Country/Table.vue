@@ -68,7 +68,7 @@ onMounted(() => {
 
 <template>
   <UContainer
-    class="w-full rounded-md border-[1px] border-solid border-gray-300 !px-0 dark:border-gray-700"
+    class="w-full rounded-md border-[1px] border-solid border-gray-300 bg-white !px-0 dark:border-gray-700 dark:bg-zinc-900"
   >
     <UTable
       :rows="countryRows"
@@ -95,7 +95,10 @@ onMounted(() => {
       </template>
 
       <template #languages-data="{ row }">
-        <div class="flex w-40 flex-row flex-wrap gap-1">
+        <div
+          data-testid="language-column-value"
+          class="flex w-40 flex-row flex-wrap gap-1"
+        >
           <UBadge
             v-for="lang in row.languages"
             :key="lang"
@@ -111,13 +114,11 @@ onMounted(() => {
       </template>
 
       <template #subregion-data="{ row }">
-        <!-- <p class="max-w-12"> -->
         <UTooltip :text="row.subregion">
           <span class="block max-w-32 overflow-hidden text-ellipsis">
             {{ row.subregion }}
           </span>
         </UTooltip>
-        <!-- </p> -->
       </template>
 
       <template #region-data="{ row }">

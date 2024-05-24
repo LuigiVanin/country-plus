@@ -16,7 +16,7 @@ const scrollToTop = () => {
       :ui="{ variant: { solid: 'shadow-lg' } }"
       :class="
         twMerge(
-          'pointer-events-none fixed bottom-4 right-4 translate-y-10 scale-50 opacity-0 transition-all duration-200 ease-out',
+          'pointer-events-none fixed bottom-5 right-6 translate-y-10 scale-50 opacity-0 transition-all duration-200 ease-out',
           y > 300 &&
             'pointer-events-auto translate-y-0 scale-[1] opacity-60 hover:opacity-100',
         )
