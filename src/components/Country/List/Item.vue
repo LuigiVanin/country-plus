@@ -9,9 +9,10 @@ type CountryItemProps = {
 const props = defineProps<CountryItemProps>();
 </script>
 <template>
-  <li :class="twMerge(props.class || '', 'flex flex-col gap-4')">
-    <slot :contry="props.country">
-      <CountryCard :data="country" />
-    </slot>
+  <li
+    :class="twMerge(props.class || '', 'flex flex-col gap-4')"
+    :data-country-name="country.name.common.toLowerCase().replace(' ', '-')"
+  >
+    <slot :contry="props.country" />
   </li>
 </template>

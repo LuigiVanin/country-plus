@@ -1,18 +1,29 @@
 <script lang="ts" setup>
 type PageTitleProps = {
   title?: string;
+  backButton?: boolean;
   description?: string;
 };
 
 const props = defineProps<PageTitleProps>();
+
+const router = useRouter();
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <div class="flex flex-row justify-between">
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col-reverse justify-between gap-2 sm:flex-row">
       <slot>
-        <h1 class="text-lg font-semibold">{{ props.title }}</h1>
+        <h1 class="text-md font-semibold sm:text-lg">{{ props.title }}</h1>
       </slot>
+      <UButton
+        v-if="props.backButton"
+        label="Back"
+        variant="link"
+        icon="i-heroicons-arrow-left"
+        :padded="false"
+        @click="router.go(-1)"
+      />
     </div>
     <p v-if="props.description" class="text-sm font-light text-gray-400">
       {{ props.description }}

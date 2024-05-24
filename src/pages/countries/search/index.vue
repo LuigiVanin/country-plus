@@ -54,7 +54,7 @@ const handleSearch = async () => {
     />
     <CountryList :countries="data" :loading="status === 'pending'">
       <template #default="{ country }">
-        <CountryListItem :country="country" />
+        <CountryCard :data="country" />
       </template>
     </CountryList>
     <ul></ul>

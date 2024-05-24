@@ -4,14 +4,28 @@ import type { FormSubmitEvent } from "#ui/types";
 import { cepService } from "~/services/cep-service";
 import PageTitle from "~/components/PageTitle.vue";
 
-const catRaces = ["Siamese", "Persian", "Sphynx", "Bengal", "StrayCat"];
-
-const dogRaces = ["Bulldog", "Poodle", "Labrador", "Golden", "StrayDog"];
+const catbreeds = ref([
+  "Siamese",
+  "Persian",
+  "Sphynx",
+  "Bengal",
+  "StrayCat",
+  "Other",
+]);
+const dogbreeds = ref([
+  "Bulldog",
+  "Poodle",
+  "Labrador",
+  "Golden",
+  "StrayDog",
+  "Other",
+]);
 
 const toast = useToast();
 
 const loading = ref(false);
 const confirmationModalisOpen = ref(false);
+const modalOtherAnimalIsOpen = ref(false);
 
 const cepValidator = z
   .string()
@@ -52,21 +66,15 @@ const schema = z.object({
       },
       { message: "The date must be between 18 and 65 years" },
     ),
-  race: z.string().refine(
-    (val) => {
-      if (form.type === "cat") {
-        return catRaces.includes(val);
-      }
-
-      return dogRaces.includes(val);
-    },
-    { message: "Invalid race" },
-  ),
+  breed: z.string(),
   cep: cepValidator,
-  uf: z.string().optional(),
-  bairro: z.string().optional(),
-  location: z.string().optional(),
-  city: z.string().optional(),
+  uf: z
+    .string()
+    .min(2, "UF is required and must have 2 characters")
+    .max(2, "UF is required and must have 2 characters"),
+  bairro: z.string().min(3, "Neighborhood is required"),
+  location: z.string().min(3, "Location is required"),
+  city: z.string().min(3, "City is required"),
   salary: z.number().min(1000),
 });
 
@@ -77,23 +85,20 @@ const form = reactive<Schema>({
   birthday: "",
   cpf: "",
   type: "dog",
-  race: dogRaces[0]!,
+  breed: dogbreeds.value[0]!,
   cep: "",
   uf: "",
   bairro: "",
+  city: "",
+  location: "",
   salary: 1000,
 });
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
-  if (!form.uf || !form.bairro || !form.location || !form.city) {
-    try {
-      await onCpfSubmit();
-    } catch (e) {}
-  }
   confirmationModalisOpen.value = true;
 };
 
-const onCpfSubmit = async () => {
+const onCepSubmit = async () => {
   loading.value = true;
   try {
     const address = await cepService.fetchAddressFromCep(form.cep);
@@ -119,6 +124,43 @@ const onCpfSubmit = async () => {
   }
   loading.value = false;
 };
+
+const finishInsertinCep = async () => {
+  if (
+    !form.uf &&
+    !form.bairro &&
+    !form.location &&
+    !form.city &&
+    form.cep.length === 9
+  ) {
+    cepValidator.parse(form.cep);
+    await onCepSubmit();
+    return;
+  }
+};
+
+const confirmOtherBreed = (breed: string) => {
+  if (form.type === "cat") {
+    catbreeds.value.unshift(breed);
+  } else {
+    dogbreeds.value.unshift(breed);
+  }
+  setTimeout(() => {
+    form.breed = breed;
+  }, 100);
+};
+
+watchEffect(() => {
+  if (form.cep) {
+    finishInsertinCep();
+  }
+});
+
+watchEffect(() => {
+  if (form.breed === "Other") {
+    modalOtherAnimalIsOpen.value = true;
+  }
+});
 </script>
 
 <template>
@@ -140,7 +182,11 @@ const onCpfSubmit = async () => {
       @submit="onSubmit"
     >
       <UFormGroup label="Full Name" name="fullname">
-        <UInput v-model="form.fullname" type="text" />
+        <UInput
+          v-model="form.fullname"
+          type="text"
+          placeholder="Insert full name..."
+        />
       </UFormGroup>
 
       <div class="flex w-full flex-row gap-4">
@@ -150,6 +196,7 @@ const onCpfSubmit = async () => {
             type="text"
             v-maska
             data-maska="###.###.###-##"
+            placeholder="Insert CPF..."
           />
         </UFormGroup>
         <UFormGroup label="Birthday" name="birthday" class="flex-1">
@@ -158,18 +205,19 @@ const onCpfSubmit = async () => {
             type="text"
             v-maska
             data-maska="##/##/####"
+            placeholder="Insert birthday..."
           />
         </UFormGroup>
       </div>
 
-      <UFormGroup label="Espécia" name="type">
+      <UFormGroup label="Species" name="type">
         <USelect
           v-model="form.type"
           @change="
             () =>
               form.type === 'cat'
-                ? (form.race = catRaces[0]!)
-                : (form.race = dogRaces[0]!)
+                ? (form.breed = catbreeds[0]!)
+                : (form.breed = dogbreeds[0]!)
           "
           :options="[
             { label: 'Cat', value: 'cat' },
@@ -177,10 +225,10 @@ const onCpfSubmit = async () => {
           ]"
         />
       </UFormGroup>
-      <UFormGroup label="Race" name="race">
+      <UFormGroup label="Breed" name="breed">
         <USelect
-          v-model="form.race"
-          :options="form.type === 'cat' ? catRaces : dogRaces"
+          v-model="form.breed"
+          :options="form.type === 'cat' ? catbreeds : dogbreeds"
         />
       </UFormGroup>
 
@@ -199,6 +247,7 @@ const onCpfSubmit = async () => {
             type="text"
             v-maska
             data-maska="#####-###"
+            placeholder="Insert CEP..."
             :disabled="loading"
           />
           <UTooltip class="!w-8" text="Search for CEP">
@@ -206,7 +255,7 @@ const onCpfSubmit = async () => {
               icon="i-heroicons-magnifying-glass"
               color="gray"
               :loading="loading"
-              @click="onCpfSubmit"
+              @click="onCepSubmit"
             />
           </UTooltip>
         </UButtonGroup>
@@ -214,21 +263,41 @@ const onCpfSubmit = async () => {
 
       <div class="flex w-full flex-row gap-4">
         <UFormGroup label="UF" name="uf" class="flex-[0.6]">
-          <UInput v-model="form.uf" type="text" :disabled="loading" />
+          <UInput
+            v-model="form.uf"
+            type="text"
+            :disabled="loading"
+            placeholder="Insert state abbreviation..."
+          />
         </UFormGroup>
 
         <UFormGroup label="City" name="city" class="flex-1">
-          <UInput v-model="form.city" type="text" :disabled="loading" />
+          <UInput
+            v-model="form.city"
+            type="text"
+            :disabled="loading"
+            placeholder="Insert city name..."
+          />
         </UFormGroup>
       </div>
 
       <div class="flex w-full flex-row gap-4">
-        <UFormGroup label="Bairro" name="bairro" class="flex-[0.6]">
-          <UInput v-model="form.bairro" type="text" :disabled="loading" />
+        <UFormGroup label="Neighborhood" name="bairro" class="flex-[0.6]">
+          <UInput
+            v-model="form.bairro"
+            type="text"
+            :disabled="loading"
+            placeholder="Insert neighborhood name..."
+          />
         </UFormGroup>
 
         <UFormGroup label="Location" name="location" class="flex-1">
-          <UInput v-model="form.location" type="text" :disabled="loading" />
+          <UInput
+            v-model="form.location"
+            type="text"
+            :disabled="loading"
+            placeholder="Insert location adress(street, number, etc)..."
+          />
         </UFormGroup>
       </div>
 
@@ -246,7 +315,11 @@ const onCpfSubmit = async () => {
       </UContainer>
     </UForm>
 
-    <ConfimationModal v-model="confirmationModalisOpen" :form-data="form" />
+    <ConfirmationModal v-model="confirmationModalisOpen" :form-data="form" />
+    <ModalOtherAnimal
+      v-model="modalOtherAnimalIsOpen"
+      @confirm-breed-name="confirmOtherBreed"
+    />
   </UContainer>
 </template>
 

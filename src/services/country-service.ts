@@ -1,14 +1,6 @@
 const RESTCOUNTRY_BASE_URL = "https://restcountries.com/v3.1";
 
-export const fetchContriesFromAmericas = async () => {
-  console.log("Fetching");
-  const countries = await $fetch(`${RESTCOUNTRY_BASE_URL}/region/americas`, {
-    method: "GET",
-  });
-  return countries as Country[];
-};
-
-export const fetchCountriesByLang = async (lang: string) => {
+const fetchCountriesByLang = async (lang: string) => {
   const countries = await $fetch(
     `${RESTCOUNTRY_BASE_URL}/lang/${lang.toLowerCase()}`,
     {
@@ -18,7 +10,7 @@ export const fetchCountriesByLang = async (lang: string) => {
   return countries as Country[];
 };
 
-export const searchCountriesByName = async (search: string) => {
+const searchCountriesByName = async (search: string) => {
   search = search.toLowerCase();
 
   const countries = await $fetch(`${RESTCOUNTRY_BASE_URL}/name/${search}`, {
@@ -28,8 +20,16 @@ export const searchCountriesByName = async (search: string) => {
   return countries as Country[];
 };
 
+const fetchCountriesByRegion = async (region: string) => {
+  const countries = await $fetch(`${RESTCOUNTRY_BASE_URL}/region/${region}`, {
+    method: "GET",
+  });
+
+  return countries as Country[];
+};
+
 export const countryService = {
-  fetchContriesFromAmericas,
   fetchCountriesByLang,
   searchCountriesByName,
+  fetchCountriesByRegion,
 };

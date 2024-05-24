@@ -1,27 +1,14 @@
 <script lang="ts" setup>
-import type { _maxHeight } from "#tailwind-config/theme";
-
 type CountryTableProps = {
   countries?: Country[] | null;
   targetLang?: string;
+  disableRegionColumn?: boolean;
   loading: boolean;
 };
 
 const props = defineProps<CountryTableProps>();
 
 const router = useRouter();
-
-const formatItems = (items: string[]) => {
-  let result = "";
-  items.forEach((item, index) => {
-    result += item;
-    if (index == items.length - 1) return;
-    if (index === items.length - 2) result += " and ";
-    else result += ", ";
-  });
-
-  return result;
-};
 
 const countryRows = computed(() => {
   if (!props.countries) return [];
@@ -33,12 +20,13 @@ const countryRows = computed(() => {
       capital: country.capital?.[0] || "No capital",
       languages: Object.values(country.languages),
       subregion: country.subregion,
+      region: country.region,
       link: country.maps.googleMaps,
     };
   });
 });
 
-const contryTableColumns = [
+const contryTableColumns = ref([
   {
     key: "name",
     label: "Name",
@@ -55,6 +43,7 @@ const contryTableColumns = [
     sortable: true,
     direction: "desc" as const,
   },
+
   {
     key: "languages",
     label: "Languages",
@@ -63,21 +52,28 @@ const contryTableColumns = [
     key: "link",
     label: "Maps",
   },
-];
+]);
 
-const page = ref(1);
-const pageCount = 10;
+onMounted(() => {
+  if (!props.disableRegionColumn) {
+    contryTableColumns.value.splice(2, 0, {
+      key: "region",
+      label: "Region",
+      sortable: true,
+      direction: "desc" as const,
+    });
+  }
+});
 </script>
 
 <template>
   <UContainer
-    class="w-full overflow-scroll rounded-md border-[1px] border-solid border-gray-300 !px-0 dark:border-gray-700"
+    class="w-full rounded-md border-[1px] border-solid border-gray-300 !px-0 dark:border-gray-700"
   >
     <UTable
       :rows="countryRows"
       :columns="contryTableColumns"
       :loading="props.loading"
-      ui="max-h-[100px]"
       :loading-state="{
         icon: 'i-heroicons-arrow-path-20-solid',
         label: 'Loading...',
@@ -90,9 +86,9 @@ const pageCount = 10;
             :href="row.link"
             target="_blank"
           >
-            <h1 class="overflow-hidden text-ellipsis">
+            <span class="overflow-hidden text-ellipsis">
               {{ row.name }}
-            </h1>
+            </span>
             <NuxtImg :src="row.flag" class="mt-1 h-3" />
           </a>
         </UTooltip>
@@ -112,6 +108,27 @@ const pageCount = 10;
             {{ lang }}
           </UBadge>
         </div>
+      </template>
+
+      <template #subregion-data="{ row }">
+        <!-- <p class="max-w-12"> -->
+        <UTooltip :text="row.subregion">
+          <span class="block max-w-32 overflow-hidden text-ellipsis">
+            {{ row.subregion }}
+          </span>
+        </UTooltip>
+        <!-- </p> -->
+      </template>
+
+      <template #region-data="{ row }">
+        <UBadge
+          role="button"
+          variant="subtle"
+          class="cursor-pointer hover:opacity-50"
+          @click="router.push(`/countries/region/${row.region}`)"
+        >
+          {{ row.region }}
+        </UBadge>
       </template>
 
       <template #link-data="{ row }">

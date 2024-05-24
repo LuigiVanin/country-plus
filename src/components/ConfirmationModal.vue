@@ -3,7 +3,7 @@ type Schema = {
   fullname: string;
   type: "cat" | "dog";
   cpf: string;
-  race: string;
+  breed: string;
   cep: string;
   uf?: string | undefined;
   bairro?: string | undefined;
@@ -69,9 +69,9 @@ const confirmForm = () => {
           </UBadge>
         </p>
         <p>
-          <strong class="mr-2">Race: </strong>
+          <strong class="mr-2">breed: </strong>
           <UBadge variant="subtle" class="capitalize">
-            {{ props.formData.race }}
+            {{ props.formData.breed }}
           </UBadge>
         </p>
 

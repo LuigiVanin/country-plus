@@ -15,10 +15,15 @@ export const fetchAddressFromCep = async (cep: string) => {
   cepValidator.parse(cep);
   cep = cep.replace("-", "");
 
-  console.log("Fetching");
-  const adress = await $fetch(`${CEPAPI_BASE_URL}/${cep}/json`, {
-    method: "GET",
-  });
+  const adress: Adress | { erro: boolean } = await $fetch(
+    `${CEPAPI_BASE_URL}/${cep}/json`,
+    {
+      method: "GET",
+    },
+  );
+
+  if ((adress as { erro: boolean }).erro) throw new Error("CEP not found");
+
   return adress as Adress;
 };
 

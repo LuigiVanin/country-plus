@@ -1,22 +1,8 @@
 <script lang="ts" setup>
 import CountryTable from "~/components/CountryTable.vue";
-import { countryService } from "~/services/country-service";
+import { useFetchCountriesFromAmerica } from "~/composables/api/useFetchCountriesFromAmerica";
 
-const { pending, data } = useAsyncData(
-  "region/americas", // NOTE: Temporarily disabling caching -
-  () => countryService.fetchContriesFromAmericas(),
-  {
-    immediate: true,
-    server: false,
-  },
-);
-
-const tableColumns = [
-  {
-    key: "name",
-    label: "name",
-  },
-];
+const { pending, countries } = useFetchCountriesFromAmerica();
 </script>
 <template>
   <PageTitle>
@@ -25,7 +11,7 @@ const tableColumns = [
       <UIcon name="i-heroicons-chevron-right" />
       <UBadge variant="subtle" size="lg">Americas</UBadge>
     </div>
-    <UButtonGroup>
+    <UButtonGroup class="hidden sm:flex">
       <UButton
         label="Search"
         icon="i-heroicons-magnifying-glass"
@@ -35,5 +21,9 @@ const tableColumns = [
       <UButton label="New Item" icon="i-heroicons-plus" to="/new-item" />
     </UButtonGroup>
   </PageTitle>
-  <CountryTable :countries="data" :loading="pending" />
+  <CountryTable
+    :countries="countries"
+    :loading="pending"
+    disable-region-column
+  />
 </template>

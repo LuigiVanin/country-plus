@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 type CountryItemProps = {
   data: Country;
   class?: string;
+  disableActions?: boolean;
 };
 
 const items = [
@@ -49,13 +50,13 @@ const props = defineProps<CountryItemProps>();
           {{ props.data.name.official }}
         </p>
       </div>
-      <div class="mt-2 flex flex-row items-center gap-1">
+      <div class="mt-2 flex-col items-center justify-start gap-1 sm:flex-row">
         <div class="flex items-center gap-1">
           <span class="text-xs text-gray-400">Region</span>
           <UBadge variant="subtle">{{ props.data.region }}</UBadge>
         </div>
 
-        <UIcon name="i-heroicons-chevron-right" class="h-3" />
+        <UIcon name="i-heroicons-chevron-right" class="hidden h-3 sm:flex" />
 
         <div class="flex items-center gap-1">
           <span class="text-xs text-gray-400">Subregion</span>
@@ -98,21 +99,21 @@ const props = defineProps<CountryItemProps>();
           </div>
 
           <div
-            class="fap-4 w-ful flex items-center justify-start gap-2 text-gray-400"
+            class="fap-4 flex w-full flex-col justify-start gap-2 text-gray-400 sm:flex-row sm:items-center"
           >
             <div class="flex flex-row flex-wrap items-center gap-1">
               <UIcon name="i-heroicons-map" class="h-4 w-4" />
               <p>
                 <span>Area: </span>
-                <strong>{{ props.data.area.toLocaleString() }}m² </strong>
+                <strong>{{ props.data.area.toLocaleString() }}km² </strong>
               </p>
             </div>
 
-            <span class="h-1 w-1 rounded-full bg-gray-300" />
+            <span class="hidden h-1 w-1 rounded-full bg-gray-300 sm:flex" />
 
-            <div class="flex flex-row flex-wrap items-center gap-1">
+            <div class="flex flex-row items-center gap-1">
               <UIcon name="i-heroicons-user-group" class="h-4 w-4" />
-              <p>
+              <p class="w-full overflow-hidden text-ellipsis text-nowrap">
                 <span> Population: </span>
                 <strong
                   >{{ props.data.population.toLocaleString() }} people
@@ -124,7 +125,10 @@ const props = defineProps<CountryItemProps>();
       </template>
     </UAccordion>
 
-    <div class="mt-4 flex w-full flex-row justify-end gap-2">
+    <div
+      v-if="!props.disableActions"
+      class="mt-4 flex w-full flex-row justify-end gap-2"
+    >
       <UButton
         icon="i-heroicons-map-pin"
         :to="props.data.maps.googleMaps"
@@ -133,7 +137,14 @@ const props = defineProps<CountryItemProps>();
       >
         Google Maps
       </UButton>
-      <UButton icon="i-heroicons-user-group"> Population Chart </UButton>
+      <UTooltip text="Population and area chart page">
+        <UButton
+          icon="i-heroicons-user-group"
+          :to="`/countries/region/${props.data.region}`"
+        >
+          Region
+        </UButton>
+      </UTooltip>
     </div>
   </UCard>
 </template>

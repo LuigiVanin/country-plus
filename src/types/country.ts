@@ -16,6 +16,7 @@ type Country = {
     png: string;
     alt: string;
   };
+  flag: string;
   subregion: string;
   region: string;
   independent: boolean;

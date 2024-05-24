@@ -26,25 +26,19 @@ watchEffect(() => {
 </script>
 
 <template>
-  <PageTitle>
+  <PageTitle back-button>
     <div class="flex items-center gap-2">
       <NuxtLink
         to="/"
         class="hover:text-primary hover:underline hover:underline-offset-4"
       >
-        <h1 class="text-lg font-semibold">Countries</h1>
+        <h1 class="font-semibold sm:text-lg">Countries</h1>
       </NuxtLink>
       <UIcon name="i-heroicons-chevron-right" />
-      <h1 class="text-lg font-semibold">Language</h1>
+      <h1 class="font-semibold sm:text-lg">Language</h1>
       <UIcon name="i-heroicons-chevron-right" />
       <UBadge variant="subtle" size="lg">{{ route.params.lang }}</UBadge>
     </div>
-    <UButton
-      label="Back"
-      variant="link"
-      icon="i-heroicons-arrow-left"
-      @click="router.go(-1)"
-    />
   </PageTitle>
   <CountryTable
     :countries="data"
