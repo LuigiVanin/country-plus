@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "mod:add": "pnpx nuxi@latest module add"
+    "mod:add": "pnpx nuxi@latest module add",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.10.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",

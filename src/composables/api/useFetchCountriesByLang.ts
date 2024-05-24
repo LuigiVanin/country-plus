@@ -2,7 +2,7 @@ import { countryService } from "~/services/country-service";
 
 export const useFetchCountriesByLang = (lang: string) => {
   const { pending, data, error } = useAsyncData(
-    `region/americas/${lang}`, // NOTE: Temporarily disabling caching -
+    `region/americas/${lang}`,
     () => countryService.fetchCountriesByLang(lang as string),
     {
       immediate: true,
