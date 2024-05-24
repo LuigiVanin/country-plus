@@ -50,7 +50,9 @@ const props = defineProps<CountryItemProps>();
           {{ props.data.name.official }}
         </p>
       </div>
-      <div class="mt-2 flex-col items-center justify-start gap-1 sm:flex-row">
+      <div
+        class="mt-2 flex w-full flex-col justify-start gap-2 sm:flex-row sm:items-center sm:gap-1"
+      >
         <div class="flex items-center gap-1">
           <span class="text-xs text-gray-400">Region</span>
           <UBadge variant="subtle">{{ props.data.region }}</UBadge>

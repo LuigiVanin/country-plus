@@ -1,18 +1,24 @@
 <script lang="ts" setup>
-import { countryService } from "~/services/country-service";
+import { useFetchCountriesByLang } from "~/composables/api/useFetchCountriesByLang";
 
 const route = useRoute();
 const router = useRouter();
 const toast = useToast();
 
-const { pending, data, error } = useAsyncData(
-  `region/americas/${route.params.lang}`, // NOTE: Temporarily disabling caching -
-  () => countryService.fetchCountriesByLang(route.params.lang as string),
-  {
-    immediate: true,
-    server: false,
-  },
-);
+// const { pending, data, error } = useAsyncData(
+//   `region/americas/${route.params.lang}`, // NOTE: Temporarily disabling caching -
+//   () => countryService.fetchCountriesByLang(route.params.lang as string),
+//   {
+//     immediate: true,
+//     server: false,
+//   },
+// );
+
+const {
+  pending,
+  countries: data,
+  error,
+} = useFetchCountriesByLang(route.params.lang as string);
 
 watchEffect(() => {
   if (error.value) {
