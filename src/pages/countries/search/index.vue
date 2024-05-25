@@ -48,6 +48,26 @@ const handleSearch = async () => {
       :loading="status === 'pending'"
       @submit="handleSearch"
     />
+    <template v-if="status !== 'pending'">
+      <p
+        v-if="!countries"
+        class="mt-10 w-full px-2 text-center text-gray-300 dark:text-gray-500"
+      >
+        <UIcon name="i-heroicons-map" class="h-6 w-6" />
+        <br />
+        There no country to be found yet... <br />
+        You must type a name in the search bar to find a country.
+      </p>
+      <p
+        v-else-if="!countries?.length"
+        class="mt-10 w-full px-2 text-center text-gray-300 dark:text-gray-500"
+      >
+        <UIcon name="i-heroicons-no-symbol" class="h-6 w-6" />
+        <br />
+        No country found with this name! <br />
+        Try again with another name, please...
+      </p>
+    </template>
     <CountryList :countries="countries" :loading="status === 'pending'">
       <template #default="{ country }">
         <CountryCard :data="country" />

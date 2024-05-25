@@ -135,6 +135,18 @@ watchEffect(() => {
         <span class="text-gray-400"> ({{ countries?.length || "..." }}) </span>
       </h2>
 
+      <template v-if="status === 'pending' || status === 'idle'">
+        <p
+          v-if="!countries?.length"
+          class="mt-8 w-full px-2 text-center text-gray-300 dark:text-gray-500"
+        >
+          <UIcon name="i-heroicons-map" class="h-6 w-6" />
+          <br />
+          There no country to be found yet... <br />
+          You may try again later.
+        </p>
+      </template>
+
       <CountryList :countries="countries" :loading="status === 'pending'">
         <template #default="{ country }">
           <CountryCard :data="country" disableActions />
