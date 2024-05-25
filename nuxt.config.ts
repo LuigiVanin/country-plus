@@ -1,11 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  runtimeConfig: {
-    public: {
-      CEPAPI_BASE_URL: process.env.CEPAPI_BASE_URL,
-      RESTCOUNTRY_BASE_URL: process.env.RESTCOUNTRY_BASE_URL,
-    },
-  },
+  runtimeConfig: {},
   app: {
     head: {
       charset: "utf-8",
