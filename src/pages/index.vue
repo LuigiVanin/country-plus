@@ -20,9 +20,5 @@ const { pending, countries } = useFetchCountriesFromAmerica();
       <UButton label="New Item" icon="i-heroicons-plus" to="/new-item" />
     </UButtonGroup>
   </PageTitle>
-  <CountryTable
-    :countries="countries"
-    :loading="pending"
-    disable-region-column
-  />
+  <CountryTable :countries="countries" :loading="pending" />
 </template>

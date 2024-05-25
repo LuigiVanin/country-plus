@@ -165,14 +165,8 @@ watchEffect(() => {
 
 <template>
   <UContainer class="!px-0">
-    <PageTitle>
+    <PageTitle back-button>
       <h1 class="text-xl font-semibold">Create New Item</h1>
-      <UButton
-        label="Back"
-        variant="link"
-        icon="i-heroicons-arrow-left"
-        to="/"
-      />
     </PageTitle>
     <UForm
       :schema="schema"

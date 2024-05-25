@@ -38,16 +38,16 @@ const contryTableColumns = ref([
     label: "Capital",
   },
   {
+    key: "languages",
+    label: "Languages",
+  },
+  {
     key: "subregion",
     label: "Subregion",
     sortable: true,
     direction: "desc" as const,
   },
 
-  {
-    key: "languages",
-    label: "Languages",
-  },
   {
     key: "link",
     label: "Maps",
@@ -56,7 +56,7 @@ const contryTableColumns = ref([
 
 onMounted(() => {
   if (!props.disableRegionColumn) {
-    contryTableColumns.value.splice(2, 0, {
+    contryTableColumns.value.splice(3, 0, {
       key: "region",
       label: "Region",
       sortable: true,
@@ -97,7 +97,7 @@ onMounted(() => {
       <template #languages-data="{ row }">
         <div
           data-testid="language-column-value"
-          class="flex w-40 flex-row flex-wrap gap-1"
+          class="flex max-w-36 flex-row flex-wrap gap-1"
         >
           <UBadge
             v-for="lang in row.languages"

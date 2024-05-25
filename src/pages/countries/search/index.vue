@@ -29,6 +29,7 @@ const handleSearch = async () => {
 <template>
   <PageTitle
     description="Search contries by its name. Any Country with a similar name will be found by this application"
+    back-button
   >
     <div class="flex items-center gap-2">
       <NuxtLink
@@ -40,12 +41,6 @@ const handleSearch = async () => {
       <UIcon name="i-heroicons-chevron-right" />
       <h1 class="text-lg font-semibold">Search</h1>
     </div>
-    <UButton
-      label="Back"
-      variant="link"
-      icon="i-heroicons-arrow-left"
-      @click="router.go(-1)"
-    />
   </PageTitle>
   <div class="mt-8 flex w-full flex-col gap-4 sm:px-4 md:px-10 lg:px-20">
     <CountrySearchInput

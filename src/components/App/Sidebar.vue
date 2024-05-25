@@ -20,7 +20,7 @@ const { sidebar, toggleSidebar } = useSidebar();
       </button>
 
       <ul
-        class="flex h-full w-full flex-col items-center gap-3 pb-2 pt-0 sm:pt-4"
+        class="flex h-full w-full flex-col items-center gap-3 overflow-hidden pb-2 pt-0 sm:pt-4"
       >
         <li class="w-full px-1">
           <UTooltip text="Countries List" :popper="{ placement: 'right' }">

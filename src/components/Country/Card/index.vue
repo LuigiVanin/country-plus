@@ -83,7 +83,7 @@ const props = defineProps<CountryItemProps>();
           class="bg-primary-50 dark:bg-primary-950 flex flex-col gap-2 rounded-md !p-3"
         >
           <div class="flex w-full flex-row flex-wrap items-center gap-1">
-            <span class="text-gray-400">Languages: </span>
+            <span class="text-gray-500 dark:text-gray-400">Languages: </span>
             <NuxtLink
               v-for="lang in props.data.languages"
               :key="lang"
@@ -101,7 +101,7 @@ const props = defineProps<CountryItemProps>();
           </div>
 
           <div
-            class="fap-4 flex w-full flex-col justify-start gap-2 text-gray-400 sm:flex-row sm:items-center"
+            class="fap-4 flex w-full flex-col justify-start gap-2 text-gray-500 sm:flex-row sm:items-center dark:text-gray-400"
           >
             <div class="flex flex-row flex-wrap items-center gap-1">
               <UIcon name="i-heroicons-map" class="h-4 w-4" />
@@ -111,7 +111,7 @@ const props = defineProps<CountryItemProps>();
               </p>
             </div>
 
-            <span class="hidden h-1 w-1 rounded-full bg-gray-300 sm:flex" />
+            <span class="hidden h-1 w-1 rounded-full bg-gray-400 sm:flex" />
 
             <div class="flex flex-row items-center gap-1">
               <UIcon name="i-heroicons-user-group" class="h-4 w-4" />
@@ -119,6 +119,19 @@ const props = defineProps<CountryItemProps>();
                 <span> Population: </span>
                 <strong
                   >{{ props.data.population.toLocaleString() }} people
+                </strong>
+              </p>
+            </div>
+
+            <span class="hidden h-1 w-1 rounded-full bg-gray-400 sm:flex" />
+
+            <div class="flex flex-row items-center gap-1">
+              <UIcon name="i-heroicons-user-group" class="h-4 w-4" />
+              <p class="w-full overflow-hidden text-ellipsis text-nowrap">
+                <span> Ratio: </span>
+                <strong
+                  >{{ (props.data.population / props.data.area).toFixed(1) }}
+                  people/km²
                 </strong>
               </p>
             </div>

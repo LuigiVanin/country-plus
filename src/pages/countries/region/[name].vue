@@ -2,11 +2,29 @@
 import PageTitle from "~/components/PageTitle.vue";
 import { useFetchCountriesByRegion } from "~/composables/api/useFetchCountriesByRegion";
 
-const router = useRouter();
+const toast = useToast();
 const route = useRoute();
+const router = useRouter();
 const { countries, status } = useFetchCountriesByRegion(
   route.params.name as string,
 );
+
+const regions = [
+  [
+    { label: "Africa", click: () => router.push("/countries/region/Africa") },
+    {
+      label: "Americas",
+      click: () => router.push("/countries/region/Americas"),
+    },
+    { label: "Asia", click: () => router.push("/countries/region/Asia") },
+    { label: "Europe", click: () => router.push("/countries/region/Europe") },
+    { label: "Oceania", click: () => router.push("/countries/region/Oceania") },
+    {
+      label: "Antarctic",
+      click: () => router.push("/countries/region/Antarctic"),
+    },
+  ],
+];
 
 const countryListContainerRef = ref<any | null>(null);
 
@@ -20,6 +38,18 @@ const onCountryClick = (countryName: string) => {
       block: "center",
     });
 };
+
+watchEffect(() => {
+  if (status.value === "error") {
+    toast.add({
+      icon: "i-heroicons-archive-box-x-mark",
+      title: "Error! Problems trying find countries by region",
+      description: "Please, try again later...",
+      color: "red",
+    });
+    router.go(-1);
+  }
+});
 </script>
 
 <template>
@@ -38,7 +68,23 @@ const onCountryClick = (countryName: string) => {
         <UIcon name="i-heroicons-chevron-right" />
         <h1 class="font-semibold sm:text-lg">Region</h1>
         <UIcon name="i-heroicons-chevron-right" />
-        <UBadge variant="subtle" size="lg">{{ route.params.name }}</UBadge>
+        <UDropdown
+          :items="regions"
+          :ui="{
+            background: 'dark:bg-zinc-900',
+            item: {
+              active:
+                'bg-primary-50 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400',
+            },
+          }"
+        >
+          <UBadge variant="subtle" size="lg">
+            <span class="mr-1">
+              {{ route.params.name }}
+            </span>
+            <UIcon name="i-heroicons-chevron-down" />
+          </UBadge>
+        </UDropdown>
       </div>
     </PageTitle>
 
@@ -54,9 +100,24 @@ const onCountryClick = (countryName: string) => {
         </template>
       </UPopover>
     </div>
+    <div
+      v-if="status === 'pending' || status === 'idle'"
+      class="mb-12 flex h-64 w-full flex-col items-center justify-center gap-3"
+    >
+      <UButton
+        variant="link"
+        :padded="false"
+        color="gray"
+        loading
+        role="none"
+      />
+      <p class="w-full px-2 text-center text-gray-400 dark:text-gray-500">
+        Loading countries from {{ route.params.name }}...
+      </p>
+    </div>
 
     <CountryChartBubble
-      v-if="countries?.length"
+      v-else-if="countries?.length"
       :countries="countries"
       @country-click="onCountryClick"
     />
@@ -70,8 +131,8 @@ const onCountryClick = (countryName: string) => {
           class="hidden h-6 w-6 sm:flex"
         />
         Countries from
-        <UBadge variant="subtle" size="lg">{{ route.params.name }}</UBadge>
-        ({{ countries?.length || "..." }})
+        {{ route.params.name }}
+        <span class="text-gray-400"> ({{ countries?.length || "..." }}) </span>
       </h2>
 
       <CountryList :countries="countries" :loading="status === 'pending'">
