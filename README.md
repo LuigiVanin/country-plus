@@ -109,7 +109,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ## Run Test 🧪 
 
-<< 🚧WIP🚧 >>
+Running tests in development mode
 
 ```bash
 #npm
@@ -124,6 +124,8 @@ yarn cy:dev
 # bun
 bun run cy:dev
 ```
+
+<< 🚧WIP🚧 >>
 
 ## Tools 🛠️
 
