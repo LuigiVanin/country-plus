@@ -8,16 +8,23 @@ const { sidebar, toggleSidebar } = useSidebar();
       class="fixed bottom-0 left-0 top-12 z-50 flex w-12 flex-col items-center border-r-[1px] border-solid border-gray-200 bg-white pt-4 transition-all duration-300 ease-in-out dark:border-gray-700 dark:bg-zinc-900"
       :class="{ 'w-12': !sidebar, 'w-36': sidebar }"
     >
-      <button
-        class="absolute -right-3 top-1 hidden h-6 w-6 items-center justify-center rounded-full bg-slate-50 shadow-md hover:bg-slate-200 md:flex dark:bg-gray-700 dark:hover:bg-gray-800"
-        @click="toggleSidebar"
+      <UTooltip
+        class="absolute -right-3 top-1 hidden md:flex"
+        :text="`${!sidebar ? 'Expand' : 'Collapse'} Sidebar`"
+        :popper="{ placement: 'right' }"
       >
-        <UIcon
-          :name="
-            sidebar ? 'i-heroicons-chevron-left' : 'i-heroicons-chevron-right'
-          "
-        />
-      </button>
+        <button
+          data-testid="sidebar-button"
+          class="h-6 w-6 items-center justify-center rounded-full bg-slate-50 shadow-md hover:bg-slate-200 md:flex dark:bg-gray-700 dark:hover:bg-gray-800"
+          @click="toggleSidebar"
+        >
+          <UIcon
+            :name="
+              sidebar ? 'i-heroicons-chevron-left' : 'i-heroicons-chevron-right'
+            "
+          />
+        </button>
+      </UTooltip>
 
       <ul
         class="flex h-full w-full flex-col items-center gap-3 overflow-hidden pb-2 pt-0 sm:pt-4"

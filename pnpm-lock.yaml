@@ -26,6 +26,9 @@ dependencies:
   chart.js:
     specifier: ^4.4.3
     version: 4.4.3
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   maska:
     specifier: ^2.1.11
     version: 2.1.11

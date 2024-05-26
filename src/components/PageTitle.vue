@@ -11,7 +11,7 @@ const router = useRouter();
 </script>
 
 <template>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2" data-testid="page-title">
     <div class="flex flex-col-reverse justify-between gap-2 sm:flex-row">
       <slot>
         <h1 class="text-md font-semibold sm:text-lg">{{ props.title }}</h1>

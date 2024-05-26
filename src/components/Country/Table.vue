@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Country } from "~/types/country";
+
 type CountryTableProps = {
   countries?: Country[] | null;
   targetLang?: string;
@@ -113,23 +115,24 @@ onMounted(() => {
         </div>
       </template>
 
+      <template #region-data="{ row }">
+        <UBadge
+          role="button"
+          variant="subtle"
+          class="cursor-pointer hover:opacity-50"
+          data-testid="region-column-value"
+          @click="router.push(`/countries/region/${row.region}`)"
+        >
+          {{ row.region }}
+        </UBadge>
+      </template>
+
       <template #subregion-data="{ row }">
         <UTooltip :text="row.subregion">
           <span class="block max-w-32 overflow-hidden text-ellipsis">
             {{ row.subregion }}
           </span>
         </UTooltip>
-      </template>
-
-      <template #region-data="{ row }">
-        <UBadge
-          role="button"
-          variant="subtle"
-          class="cursor-pointer hover:opacity-50"
-          @click="router.push(`/countries/region/${row.region}`)"
-        >
-          {{ row.region }}
-        </UBadge>
       </template>
 
       <template #link-data="{ row }">

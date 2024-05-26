@@ -11,6 +11,7 @@ const scrollToTop = () => {
 <template>
   <ClientOnly>
     <UButton
+      data-testid="scroll-top-button"
       icon="i-heroicons-arrow-up"
       size="lg"
       :ui="{ variant: { solid: 'shadow-lg' } }"

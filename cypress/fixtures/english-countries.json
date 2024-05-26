@@ -1,0 +1,1355 @@
+[
+  {
+    "name": {
+      "common": "United States",
+      "official": "United States of America",
+      "nativeName": {
+        "eng": {
+          "official": "United States of America",
+          "common": "United States"
+        }
+      }
+    },
+    "tld": [
+      ".us"
+    ],
+    "cca2": "US",
+    "ccn3": "840",
+    "cca3": "USA",
+    "cioc": "USA",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+1",
+      "suffixes": [
+        "201",
+        "202",
+        "203",
+        "205",
+        "206",
+        "207",
+        "208",
+        "209",
+        "210",
+        "212",
+        "213",
+        "214",
+        "215",
+        "216",
+        "217",
+        "218",
+        "219",
+        "220",
+        "224",
+        "225",
+        "227",
+        "228",
+        "229",
+        "231",
+        "234",
+        "239",
+        "240",
+        "248",
+        "251",
+        "252",
+        "253",
+        "254",
+        "256",
+        "260",
+        "262",
+        "267",
+        "269",
+        "270",
+        "272",
+        "274",
+        "276",
+        "281",
+        "283",
+        "301",
+        "302",
+        "303",
+        "304",
+        "305",
+        "307",
+        "308",
+        "309",
+        "310",
+        "312",
+        "313",
+        "314",
+        "315",
+        "316",
+        "317",
+        "318",
+        "319",
+        "320",
+        "321",
+        "323",
+        "325",
+        "327",
+        "330",
+        "331",
+        "334",
+        "336",
+        "337",
+        "339",
+        "346",
+        "347",
+        "351",
+        "352",
+        "360",
+        "361",
+        "364",
+        "380",
+        "385",
+        "386",
+        "401",
+        "402",
+        "404",
+        "405",
+        "406",
+        "407",
+        "408",
+        "409",
+        "410",
+        "412",
+        "413",
+        "414",
+        "415",
+        "417",
+        "419",
+        "423",
+        "424",
+        "425",
+        "430",
+        "432",
+        "434",
+        "435",
+        "440",
+        "442",
+        "443",
+        "447",
+        "458",
+        "463",
+        "464",
+        "469",
+        "470",
+        "475",
+        "478",
+        "479",
+        "480",
+        "484",
+        "501",
+        "502",
+        "503",
+        "504",
+        "505",
+        "507",
+        "508",
+        "509",
+        "510",
+        "512",
+        "513",
+        "515",
+        "516",
+        "517",
+        "518",
+        "520",
+        "530",
+        "531",
+        "534",
+        "539",
+        "540",
+        "541",
+        "551",
+        "559",
+        "561",
+        "562",
+        "563",
+        "564",
+        "567",
+        "570",
+        "571",
+        "573",
+        "574",
+        "575",
+        "580",
+        "585",
+        "586",
+        "601",
+        "602",
+        "603",
+        "605",
+        "606",
+        "607",
+        "608",
+        "609",
+        "610",
+        "612",
+        "614",
+        "615",
+        "616",
+        "617",
+        "618",
+        "619",
+        "620",
+        "623",
+        "626",
+        "628",
+        "629",
+        "630",
+        "631",
+        "636",
+        "641",
+        "646",
+        "650",
+        "651",
+        "657",
+        "660",
+        "661",
+        "662",
+        "667",
+        "669",
+        "678",
+        "681",
+        "682",
+        "701",
+        "702",
+        "703",
+        "704",
+        "706",
+        "707",
+        "708",
+        "712",
+        "713",
+        "714",
+        "715",
+        "716",
+        "717",
+        "718",
+        "719",
+        "720",
+        "724",
+        "725",
+        "727",
+        "730",
+        "731",
+        "732",
+        "734",
+        "737",
+        "740",
+        "743",
+        "747",
+        "754",
+        "757",
+        "760",
+        "762",
+        "763",
+        "765",
+        "769",
+        "770",
+        "772",
+        "773",
+        "774",
+        "775",
+        "779",
+        "781",
+        "785",
+        "786",
+        "801",
+        "802",
+        "803",
+        "804",
+        "805",
+        "806",
+        "808",
+        "810",
+        "812",
+        "813",
+        "814",
+        "815",
+        "816",
+        "817",
+        "818",
+        "828",
+        "830",
+        "831",
+        "832",
+        "843",
+        "845",
+        "847",
+        "848",
+        "850",
+        "854",
+        "856",
+        "857",
+        "858",
+        "859",
+        "860",
+        "862",
+        "863",
+        "864",
+        "865",
+        "870",
+        "872",
+        "878",
+        "901",
+        "903",
+        "904",
+        "906",
+        "907",
+        "908",
+        "909",
+        "910",
+        "912",
+        "913",
+        "914",
+        "915",
+        "916",
+        "917",
+        "918",
+        "919",
+        "920",
+        "925",
+        "928",
+        "929",
+        "930",
+        "931",
+        "934",
+        "936",
+        "937",
+        "938",
+        "940",
+        "941",
+        "947",
+        "949",
+        "951",
+        "952",
+        "954",
+        "956",
+        "959",
+        "970",
+        "971",
+        "972",
+        "973",
+        "975",
+        "978",
+        "979",
+        "980",
+        "984",
+        "985",
+        "989"
+      ]
+    },
+    "capital": [
+      "Washington, D.C."
+    ],
+    "altSpellings": [
+      "US",
+      "USA",
+      "United States of America"
+    ],
+    "region": "Americas",
+    "subregion": "North America",
+    "languages": {
+      "eng": "English"
+    },
+    "translations": {
+      "ara": {
+        "official": "الولايات المتحدة الامريكية",
+        "common": "الولايات المتحدة"
+      },
+      "bre": {
+        "official": "Stadoù-Unanet Amerika",
+        "common": "Stadoù-Unanet"
+      },
+      "ces": {
+        "official": "Spojené státy americké",
+        "common": "Spojené státy"
+      },
+      "cym": {
+        "official": "United States of America",
+        "common": "United States"
+      },
+      "deu": {
+        "official": "Vereinigte Staaten von Amerika",
+        "common": "Vereinigte Staaten"
+      },
+      "est": {
+        "official": "Ameerika Ühendriigid",
+        "common": "Ameerika Ühendriigid"
+      },
+      "fin": {
+        "official": "Amerikan yhdysvallat",
+        "common": "Yhdysvallat"
+      },
+      "fra": {
+        "official": "Les états-unis d'Amérique",
+        "common": "États-Unis"
+      },
+      "hrv": {
+        "official": "Sjedinjene Države Amerike",
+        "common": "Sjedinjene Američke Države"
+      },
+      "hun": {
+        "official": "Amerikai Egyesült Államok",
+        "common": "Amerikai Egyesült Államok"
+      },
+      "ita": {
+        "official": "Stati Uniti d'America",
+        "common": "Stati Uniti d'America"
+      },
+      "jpn": {
+        "official": "アメリカ合衆国",
+        "common": "アメリカ合衆国"
+      },
+      "kor": {
+        "official": "아메리카 합중국",
+        "common": "미국"
+      },
+      "nld": {
+        "official": "Verenigde Staten van Amerika",
+        "common": "Verenigde Staten"
+      },
+      "per": {
+        "official": "ایالات متحده آمریکا",
+        "common": "ایالات متحده آمریکا"
+      },
+      "pol": {
+        "official": "Stany Zjednoczone Ameryki",
+        "common": "Stany Zjednoczone"
+      },
+      "por": {
+        "official": "Estados Unidos da América",
+        "common": "Estados Unidos"
+      },
+      "rus": {
+        "official": "Соединенные Штаты Америки",
+        "common": "Соединённые Штаты Америки"
+      },
+      "slk": {
+        "official": "Spojené štáty Americké",
+        "common": "Spojené štáty americké"
+      },
+      "spa": {
+        "official": "Estados Unidos de América",
+        "common": "Estados Unidos"
+      },
+      "srp": {
+        "official": "Сједињене Америчке Државе",
+        "common": "Сједињене Америчке Државе"
+      },
+      "swe": {
+        "official": "Amerikas förenta stater",
+        "common": "USA"
+      },
+      "tur": {
+        "official": "Amerika Birleşik Devletleri",
+        "common": "Amerika Birleşik Devletleri"
+      },
+      "urd": {
+        "official": "ریاستہائے متحدہ امریکا",
+        "common": "ریاستہائے متحدہ"
+      },
+      "zho": {
+        "official": "美利坚合众国",
+        "common": "美国"
+      }
+    },
+    "latlng": [
+      38,
+      -97
+    ],
+    "landlocked": false,
+    "borders": [
+      "CAN",
+      "MEX"
+    ],
+    "area": 9372610,
+    "demonyms": {
+      "eng": {
+        "f": "American",
+        "m": "American"
+      },
+      "fra": {
+        "f": "Américaine",
+        "m": "Américain"
+      }
+    },
+    "flag": "🇺🇸",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/e8M246zY4BSjkjAv6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/148838#map=2/20.6/-85.8"
+    },
+    "population": 329484123,
+    "gini": {
+      "2018": 41.4
+    },
+    "fifa": "USA",
+    "car": {
+      "signs": [
+        "USA"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-12:00",
+      "UTC-11:00",
+      "UTC-10:00",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC+10:00",
+      "UTC+12:00"
+    ],
+    "continents": [
+      "North America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/us.png",
+      "svg": "https://flagcdn.com/us.svg",
+      "alt": "The flag of the United States of America is composed of thirteen equal horizontal bands of red alternating with white. A blue rectangle, bearing fifty small five-pointed white stars arranged in nine rows where rows of six stars alternate with rows of five stars, is superimposed in the canton."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/us.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/us.svg"
+    },
+    "startOfWeek": "sunday",
+    "capitalInfo": {
+      "latlng": [
+        38.89,
+        -77.05
+      ]
+    },
+    "postalCode": {
+      "format": "#####-####",
+      "regex": "^\\d{5}(-\\d{4})?$"
+    }
+  },
+  {
+    "name": {
+      "common": "Nauru",
+      "official": "Republic of Nauru",
+      "nativeName": {
+        "eng": {
+          "official": "Republic of Nauru",
+          "common": "Nauru"
+        },
+        "nau": {
+          "official": "Republic of Nauru",
+          "common": "Nauru"
+        }
+      }
+    },
+    "tld": [
+      ".nr"
+    ],
+    "cca2": "NR",
+    "ccn3": "520",
+    "cca3": "NRU",
+    "cioc": "NRU",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+6",
+      "suffixes": [
+        "74"
+      ]
+    },
+    "capital": [
+      "Yaren"
+    ],
+    "altSpellings": [
+      "NR",
+      "Naoero",
+      "Pleasant Island",
+      "Republic of Nauru",
+      "Ripublik Naoero"
+    ],
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "languages": {
+      "eng": "English",
+      "nau": "Nauru"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية ناورو",
+        "common": "ناورو"
+      },
+      "bre": {
+        "official": "Republik Nauru",
+        "common": "Nauru"
+      },
+      "ces": {
+        "official": "Republika Nauru",
+        "common": "Nauru"
+      },
+      "cym": {
+        "official": "Republic of Nauru",
+        "common": "Nauru"
+      },
+      "deu": {
+        "official": "Republik Nauru",
+        "common": "Nauru"
+      },
+      "est": {
+        "official": "Nauru Vabariik",
+        "common": "Nauru"
+      },
+      "fin": {
+        "official": "Naurun tasavalta",
+        "common": "Nauru"
+      },
+      "fra": {
+        "official": "République de Nauru",
+        "common": "Nauru"
+      },
+      "hrv": {
+        "official": "Republika Nauru",
+        "common": "Nauru"
+      },
+      "hun": {
+        "official": "Naurui Köztársaság",
+        "common": "Nauru"
+      },
+      "ita": {
+        "official": "Repubblica di Nauru",
+        "common": "Nauru"
+      },
+      "jpn": {
+        "official": "ナウル共和国",
+        "common": "ナウル"
+      },
+      "kor": {
+        "official": "나우루 공화국",
+        "common": "나우루"
+      },
+      "nld": {
+        "official": "Republiek Nauru",
+        "common": "Nauru"
+      },
+      "per": {
+        "official": "جمهوری نائورو",
+        "common": "نائورو"
+      },
+      "pol": {
+        "official": "Republika Nauru",
+        "common": "Nauru"
+      },
+      "por": {
+        "official": "República de Nauru",
+        "common": "Nauru"
+      },
+      "rus": {
+        "official": "Республика Науру",
+        "common": "Науру"
+      },
+      "slk": {
+        "official": "Naurská republika",
+        "common": "Nauru"
+      },
+      "spa": {
+        "official": "República de Nauru",
+        "common": "Nauru"
+      },
+      "srp": {
+        "official": "Република Науру",
+        "common": "Науру"
+      },
+      "swe": {
+        "official": "Republiken Nauru",
+        "common": "Nauru"
+      },
+      "tur": {
+        "official": "Nauru Cumhuriyeti",
+        "common": "Nauru"
+      },
+      "urd": {
+        "official": "جمہوریہ ناورو",
+        "common": "ناورو"
+      },
+      "zho": {
+        "official": "瑙鲁共和国",
+        "common": "瑙鲁"
+      }
+    },
+    "latlng": [
+      -0.53333333,
+      166.91666666
+    ],
+    "landlocked": false,
+    "area": 21,
+    "demonyms": {
+      "eng": {
+        "f": "Nauruan",
+        "m": "Nauruan"
+      },
+      "fra": {
+        "f": "Nauruane",
+        "m": "Nauruan"
+      }
+    },
+    "flag": "🇳🇷",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/kyAGw6XEJgjSMsTK7",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/571804"
+    },
+    "population": 10834,
+    "gini": {
+      "2012": 34.8
+    },
+    "car": {
+      "signs": [
+        "NAU"
+      ],
+      "side": "left"
+    },
+    "timezones": [
+      "UTC+12:00"
+    ],
+    "continents": [
+      "Oceania"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/nr.png",
+      "svg": "https://flagcdn.com/nr.svg",
+      "alt": "The flag of Nauru has a dark blue field with a thin yellow horizontal band across the center and a large white twelve-pointed star beneath the horizontal band on the hoist side of the field."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/nr.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/nr.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -0.55,
+        166.92
+      ]
+    }
+  },
+  {
+    "name": {
+      "common": "Caribbean Netherlands",
+      "official": "Bonaire, Sint Eustatius and Saba",
+      "nativeName": {
+        "nld": {
+          "official": "Bonaire, Sint Eustatius en Saba",
+          "common": "Caribisch Nederland"
+        },
+        "pap": {
+          "official": "Boneiru, Sint Eustatius y Saba",
+          "common": "Boneiru, Sint Eustatius y Saba"
+        }
+      }
+    },
+    "tld": [
+      ".bq",
+      ".nl"
+    ],
+    "cca2": "BQ",
+    "ccn3": "535",
+    "cca3": "BES",
+    "independent": false,
+    "status": "officially-assigned",
+    "unMember": false,
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+5",
+      "suffixes": [
+        "99"
+      ]
+    },
+    "capital": [
+      "Kralendijk"
+    ],
+    "altSpellings": [
+      "BES islands"
+    ],
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "languages": {
+      "eng": "English",
+      "nld": "Dutch",
+      "pap": "Papiamento"
+    },
+    "translations": {
+      "ara": {
+        "official": "بونير وسينت أوستاتيوس وسابا",
+        "common": "الجزر الكاريبية الهولندية"
+      },
+      "bre": {
+        "official": "Bonaire, Sint Eustatius ha Saba",
+        "common": "Bonaire, Sint Eustatius ha Saba"
+      },
+      "ces": {
+        "official": "Karibské Nizozemsko",
+        "common": "Karibské Nizozemsko"
+      },
+      "cym": {
+        "official": "Bonaire, Sint Eustatius and Saba",
+        "common": "Caribbean Netherlands"
+      },
+      "deu": {
+        "official": "Bonaire, Sint Eustatius und Saba",
+        "common": "Karibische Niederlande"
+      },
+      "est": {
+        "official": "Bonaire, Sint Eustatius ja Saba",
+        "common": "Bonaire, Sint Eustatius ja Saba"
+      },
+      "fin": {
+        "official": "Bonaire, Sint Eustatius ja Saba",
+        "common": "Bonaire, Sint Eustatius ja Saba"
+      },
+      "fra": {
+        "official": "Bonaire, Saint-Eustache et Saba",
+        "common": "Pays-Bas caribéens"
+      },
+      "hrv": {
+        "official": "Bonaire, Sint Eustatius i Saba",
+        "common": "Bonaire, Sint Eustatius i Saba"
+      },
+      "hun": {
+        "official": "Bonaire",
+        "common": "Bonaire"
+      },
+      "ita": {
+        "official": "Bonaire, Sint Eustatius e Saba",
+        "common": "Paesi Bassi caraibici"
+      },
+      "jpn": {
+        "official": "ボネール、シント・ユースタティウスおよびサバ",
+        "common": "ボネール、シント・ユースタティウスおよびサバ"
+      },
+      "kor": {
+        "official": "보네르, 신트외스타티위스, 사바",
+        "common": "카리브 네덜란드"
+      },
+      "nld": {
+        "official": "Bonaire, Sint Eustatius en Saba",
+        "common": "Caribisch Nederland"
+      },
+      "per": {
+        "official": "جزایر کارائیب هلند",
+        "common": "جزایر کارائیب هلند"
+      },
+      "pol": {
+        "official": "Bonaire, Sint Eustatius i Saba",
+        "common": "Antyle Holenderskie"
+      },
+      "por": {
+        "official": "Bonaire, Saba e Santo Eustáquio",
+        "common": "Países Baixos Caribenhos"
+      },
+      "rus": {
+        "official": "Бонэйр, Синт-Эстатиус и Саба",
+        "common": "Карибские Нидерланды"
+      },
+      "slk": {
+        "official": "Bonaire, Sint Eustatius a Saba",
+        "common": "Bonaire, Sint Eustatius a Saba"
+      },
+      "spa": {
+        "official": "Bonaire, San Eustaquio y Saba",
+        "common": "Caribe Neerlandés"
+      },
+      "srp": {
+        "official": "Бонер, Свети Еустахије и Саба",
+        "common": "Карипска Холандија"
+      },
+      "swe": {
+        "official": "Bonaire, Sint Eustatius and Saba",
+        "common": "Karibiska Nederländerna"
+      },
+      "tur": {
+        "official": "Karayip Hollandası",
+        "common": "Karayip Hollandası"
+      },
+      "urd": {
+        "official": "بونایر، سینٹ ایوسٹائیس اور سابا",
+        "common": "کیریبین نیدرلینڈز"
+      },
+      "zho": {
+        "official": "荷蘭加勒比區",
+        "common": "荷蘭加勒比區"
+      }
+    },
+    "latlng": [
+      12.18,
+      -68.25
+    ],
+    "landlocked": false,
+    "area": 328,
+    "demonyms": {
+      "eng": {
+        "f": "Dutch",
+        "m": "Dutch"
+      },
+      "fra": {
+        "f": "Néerlandaise",
+        "m": "Néerlandais"
+      }
+    },
+    "flag": "🇧🇶",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/4XVes1P6uEDTz77WA",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1216720"
+    },
+    "population": 25987,
+    "car": {
+      "signs": [
+        ""
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-04:00"
+    ],
+    "continents": [
+      "North America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/bq.png",
+      "svg": "https://flagcdn.com/bq.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/bq.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/bq.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        12.14,
+        -68.27
+      ]
+    }
+  },
+  {
+    "name": {
+      "common": "Cook Islands",
+      "official": "Cook Islands",
+      "nativeName": {
+        "eng": {
+          "official": "Cook Islands",
+          "common": "Cook Islands"
+        },
+        "rar": {
+          "official": "Kūki 'Āirani",
+          "common": "Kūki 'Āirani"
+        }
+      }
+    },
+    "tld": [
+      ".ck"
+    ],
+    "cca2": "CK",
+    "ccn3": "184",
+    "cca3": "COK",
+    "cioc": "COK",
+    "independent": false,
+    "status": "officially-assigned",
+    "unMember": false,
+    "currencies": {
+      "CKD": {
+        "name": "Cook Islands dollar",
+        "symbol": "$"
+      },
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+6",
+      "suffixes": [
+        "82"
+      ]
+    },
+    "capital": [
+      "Avarua"
+    ],
+    "altSpellings": [
+      "CK",
+      "Kūki 'Āirani"
+    ],
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "languages": {
+      "eng": "English",
+      "rar": "Cook Islands Māori"
+    },
+    "translations": {
+      "ara": {
+        "official": "جزر كوك",
+        "common": "جزر كوك"
+      },
+      "bre": {
+        "official": "Inizi Cook",
+        "common": "Inizi Cook"
+      },
+      "ces": {
+        "official": "Cookovy ostrovy",
+        "common": "Cookovy ostrovy"
+      },
+      "cym": {
+        "official": "Ynysoedd Cook",
+        "common": "Ynysoedd Cook"
+      },
+      "deu": {
+        "official": "Cookinseln",
+        "common": "Cookinseln"
+      },
+      "est": {
+        "official": "Cooki saared",
+        "common": "Cooki saared"
+      },
+      "fin": {
+        "official": "Cookinsaaret",
+        "common": "Cookinsaaret"
+      },
+      "fra": {
+        "official": "Îles Cook",
+        "common": "Îles Cook"
+      },
+      "hrv": {
+        "official": "Cook Islands",
+        "common": "Cookovo Otočje"
+      },
+      "hun": {
+        "official": "Cook-szigetek",
+        "common": "Cook-szigetek"
+      },
+      "ita": {
+        "official": "Isole Cook",
+        "common": "Isole Cook"
+      },
+      "jpn": {
+        "official": "クック諸島",
+        "common": "クック諸島"
+      },
+      "kor": {
+        "official": "쿡 제도",
+        "common": "쿡 제도"
+      },
+      "nld": {
+        "official": "Cook eilanden",
+        "common": "Cookeilanden"
+      },
+      "per": {
+        "official": "جزایر کوک",
+        "common": "جزایر کوک"
+      },
+      "pol": {
+        "official": "Wyspy Cooka",
+        "common": "Wyspy Cooka"
+      },
+      "por": {
+        "official": "Ilhas Cook",
+        "common": "Ilhas Cook"
+      },
+      "rus": {
+        "official": "острова Кука",
+        "common": "Острова Кука"
+      },
+      "slk": {
+        "official": "Cookove ostrovy",
+        "common": "Cookove ostrovy"
+      },
+      "spa": {
+        "official": "Islas Cook",
+        "common": "Islas Cook"
+      },
+      "srp": {
+        "official": "Кукова Острва",
+        "common": "Кукова Острва"
+      },
+      "swe": {
+        "official": "Cooköarna",
+        "common": "Cooköarna"
+      },
+      "tur": {
+        "official": "Cook Adaları",
+        "common": "Cook Adaları"
+      },
+      "urd": {
+        "official": "جزائر کک",
+        "common": "جزائر کک"
+      },
+      "zho": {
+        "official": "库克群岛",
+        "common": "库克群岛"
+      }
+    },
+    "latlng": [
+      -21.23333333,
+      -159.76666666
+    ],
+    "landlocked": false,
+    "area": 236,
+    "demonyms": {
+      "eng": {
+        "f": "Cook Islander",
+        "m": "Cook Islander"
+      },
+      "fra": {
+        "f": "Cookienne",
+        "m": "Cookien"
+      }
+    },
+    "flag": "🇨🇰",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/nrGZrvWRGB4WHgDC9",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/2184233"
+    },
+    "population": 18100,
+    "fifa": "COK",
+    "car": {
+      "signs": [
+        "NZ"
+      ],
+      "side": "left"
+    },
+    "timezones": [
+      "UTC-10:00"
+    ],
+    "continents": [
+      "Oceania"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ck.png",
+      "svg": "https://flagcdn.com/ck.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/ck.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/ck.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -21.2,
+        -159.77
+      ]
+    }
+  },
+  {
+    "name": {
+      "common": "Tokelau",
+      "official": "Tokelau",
+      "nativeName": {
+        "eng": {
+          "official": "Tokelau",
+          "common": "Tokelau"
+        },
+        "smo": {
+          "official": "Tokelau",
+          "common": "Tokelau"
+        },
+        "tkl": {
+          "official": "Tokelau",
+          "common": "Tokelau"
+        }
+      }
+    },
+    "tld": [
+      ".tk"
+    ],
+    "cca2": "TK",
+    "ccn3": "772",
+    "cca3": "TKL",
+    "independent": false,
+    "status": "officially-assigned",
+    "unMember": false,
+    "currencies": {
+      "NZD": {
+        "name": "New Zealand dollar",
+        "symbol": "$"
+      }
+    },
+    "idd": {
+      "root": "+6",
+      "suffixes": [
+        "90"
+      ]
+    },
+    "capital": [
+      "Fakaofo"
+    ],
+    "altSpellings": [
+      "TK"
+    ],
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "languages": {
+      "eng": "English",
+      "smo": "Samoan",
+      "tkl": "Tokelauan"
+    },
+    "translations": {
+      "ara": {
+        "official": "توكيلاو",
+        "common": "توكيلاو"
+      },
+      "bre": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "ces": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "cym": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "deu": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "est": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "fin": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "fra": {
+        "official": "Îles Tokelau",
+        "common": "Tokelau"
+      },
+      "hrv": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "hun": {
+        "official": "Tokelau-szigetek",
+        "common": "Tokelau-szigetek"
+      },
+      "ita": {
+        "official": "Tokelau",
+        "common": "Isole Tokelau"
+      },
+      "jpn": {
+        "official": "トケラウ諸島",
+        "common": "トケラウ"
+      },
+      "kor": {
+        "official": "토켈라우",
+        "common": "토켈라우"
+      },
+      "nld": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "per": {
+        "official": "توکلائو",
+        "common": "توکلائو"
+      },
+      "pol": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "por": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "rus": {
+        "official": "Токелау",
+        "common": "Токелау"
+      },
+      "slk": {
+        "official": "Tokelauské ostrovy",
+        "common": "Tokelau"
+      },
+      "spa": {
+        "official": "Tokelau",
+        "common": "Islas Tokelau"
+      },
+      "srp": {
+        "official": "Токелау",
+        "common": "Токелау"
+      },
+      "swe": {
+        "official": "Tokelauöarna",
+        "common": "Tokelauöarna"
+      },
+      "tur": {
+        "official": "Tokelau",
+        "common": "Tokelau"
+      },
+      "urd": {
+        "official": "ٹوکیلاؤ",
+        "common": "ٹوکیلاؤ"
+      },
+      "zho": {
+        "official": "托克劳",
+        "common": "托克劳"
+      }
+    },
+    "latlng": [
+      -9,
+      -172
+    ],
+    "landlocked": false,
+    "area": 12,
+    "demonyms": {
+      "eng": {
+        "f": "Tokelauan",
+        "m": "Tokelauan"
+      }
+    },
+    "flag": "🇹🇰",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/Ap5qN8qien6pT9UN6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/2186600"
+    },
+    "population": 1411,
+    "car": {
+      "signs": [
+        ""
+      ],
+      "side": "left"
+    },
+    "timezones": [
+      "UTC+13:00"
+    ],
+    "continents": [
+      "Oceania"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/tk.png",
+      "svg": "https://flagcdn.com/tk.svg"
+    },
+    "coatOfArms": {},
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -9.38,
+        -171.22
+      ]
+    }
+  }
+]

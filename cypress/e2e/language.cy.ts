@@ -1,37 +1,37 @@
 import { Country } from "../../src/types/country";
 
-describe("Home page tests", () => {
-  it("Testing home components configuration", () => {
-    cy.visit("/");
+describe("Language page testing", () => {
+  it("Testing language page rendering", () => {
+    cy.visit("/countries/language/English");
 
-    cy.interceptRegion("Americas", "americas-countries-lg.json");
+    cy.interceptLanguage("english", "english-countries.json");
 
-    cy.get("table").should("exist");
+    cy.get('main [data-testid="page-title"]').contains("Countries");
+    cy.get('main [data-testid="page-title"]').contains("Language");
+    cy.get('main [data-testid="page-title"]').contains("English");
 
-    cy.get('main [data-testid="page-title"] h1').contains("Countries");
-    cy.get('main [data-testid="page-title"]').contains("Americas");
-
-    cy.get('main [data-testid="page-title"] a').each(($el) => {
-      cy.wrap($el).contains(/(Search)|(New Item)/i);
-    });
-
-    cy.fixture("americas-countries-lg.json").then((data) => {
+    cy.fixture("english-countries.json").then((data) => {
       cy.get("tbody tr").should("have.length", data.length);
     });
 
     cy.get("table thead tr ").each(($el) => {
       cy.wrap($el).contains(/(Name)|(Capital)|(Region)|(Subregion)|(Maps)/i);
     });
+
+    cy.fixture("english-countries.json").then((data) => {
+      cy.get("tbody tr").should("have.length", data.length);
+    });
   });
 
   describe("Table tests", () => {
     it("Testing table data rendering", () => {
-      cy.visit("/");
+      cy.visit("/countries/language/English");
 
-      cy.interceptRegion("Americas", "americas-countries.json");
+      cy.interceptLanguage("english", "english-countries.json");
+
       cy.get('[data-testid="language-column-value"').should("exist");
 
-      cy.fixture("americas-countries.json").then((data: Country[]) => {
+      cy.fixture("english-countries.json").then((data: Country[]) => {
         cy.get("table tbody td").each(($el, idx) => {
           const columnIdx = idx % 6;
           const dataIdx = Math.floor(idx / 6);
@@ -58,13 +58,13 @@ describe("Home page tests", () => {
     });
 
     it("Testing language column navigation", () => {
-      cy.visit("/");
+      cy.visit("/countries/language/English");
 
-      cy.interceptRegion("Americas", "americas-countries.json");
+      cy.interceptLanguage("english", "english-countries.json");
 
       cy.get('[data-testid="language-column-value"').should("exist");
 
-      cy.fixture("americas-countries.json").then((data: Country[]) => {
+      cy.fixture("english-countries.json").then((data: Country[]) => {
         const lang = Object.values(data[0].languages)[0];
 
         cy.get('[data-testid="language-column-value"] span')
@@ -77,11 +77,11 @@ describe("Home page tests", () => {
     });
 
     it("Testing region column navigation", () => {
-      cy.visit("/");
+      cy.visit("/countries/language/English");
 
-      cy.interceptRegion("Americas", "americas-countries.json");
+      cy.interceptLanguage("english", "english-countries.json");
 
-      cy.get('[data-testid="region-column-value"]').should("exist");
+      cy.get('[data-testid="region-column-value"').should("exist");
 
       cy.fixture("americas-countries.json").then((data: Country[]) => {
         const region = data[0].region;
@@ -90,7 +90,7 @@ describe("Home page tests", () => {
           .first()
           .should("have.text", region)
           .click();
-        // cy.interceptRegion("Americas", "americas-countries.json");
+        // cy.interceptRegion("english", "english-countries.json");
         cy.location("pathname").should("eq", `/countries/region/${region}`);
       });
     });

@@ -1,4 +1,4 @@
-type Country = {
+export type Country = {
   name: {
     official: string;
     common: string;

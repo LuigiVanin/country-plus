@@ -21,6 +21,7 @@ const { isDark, toggleTheme } = useTheme();
           :icon="
             isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
           "
+          data-testid="theme-button"
           color="gray"
           variant="ghost"
           aria-label="Theme"
