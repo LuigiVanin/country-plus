@@ -11,7 +11,8 @@
     "postinstall": "nuxt prepare",
     "mod:add": "pnpx nuxi@latest module add",
     "cy:open": "cypress open",
-    "cy:dev": "start-server-and-test dev http://localhost:3000 cy:open"
+    "cy:dev": "start-server-and-test dev http://localhost:3000 cy:open",
+    "cy:run": "cypress run --browser chrome"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",

@@ -1,4 +1,17 @@
 describe("Startup testing", () => {
+  beforeEach(() => {
+    if (Cypress.browser.family === "chromium") {
+      Cypress.automation("remote:debugger:protocol", {
+        command: "Network.enable",
+        params: {},
+      });
+      Cypress.automation("remote:debugger:protocol", {
+        command: "Network.setCacheDisabled",
+        params: { cacheDisabled: true },
+      });
+    }
+  });
+
   it("Testing window scrolling behaviour", () => {
     cy.visit("/");
 

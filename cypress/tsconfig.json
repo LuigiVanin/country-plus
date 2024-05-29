@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es5", "dom", "ES2017.Object"],
+    "lib": ["es5", "dom", "ES2017.Object", "ES2016"],
     "types": ["cypress"],
     "baseUrl": "../node_modules"
   },

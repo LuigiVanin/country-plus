@@ -7,6 +7,7 @@ declare global {
        */
       interceptRegion(region: string, fixture: string): void;
       interceptLanguage(language: string, fixture: string): void;
+      interceptSearch(search: string, fixture: string): void;
     }
   }
 }

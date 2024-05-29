@@ -1,6 +1,19 @@
 import { Country } from "../../src/types/country";
 
 describe("Language page testing", () => {
+  beforeEach(() => {
+    if (Cypress.browser.family === "chromium") {
+      Cypress.automation("remote:debugger:protocol", {
+        command: "Network.enable",
+        params: {},
+      });
+      Cypress.automation("remote:debugger:protocol", {
+        command: "Network.setCacheDisabled",
+        params: { cacheDisabled: true },
+      });
+    }
+  });
+
   it("Testing language page rendering", () => {
     cy.visit("/countries/language/English");
 
