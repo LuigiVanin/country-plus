@@ -9,15 +9,24 @@ const props = defineProps<CountrySearchInputProps>();
 
 const emit = defineEmits(["submit", "update:modelValue"]);
 
+const isMounted = ref(false);
+
 const schema = z.object({
   modelValue: z
     .string()
     .min(3, "The search term must have at least 3 characters"),
 });
+
+onMounted(() => {
+  // NOTE: prevent the form from being rendered before the component is mounted - hidration missmatch
+  isMounted.value = true;
+});
 </script>
 
 <template>
   <UForm
+    v-if="isMounted"
+    class="country-search-form"
     :schema="schema"
     :state="{ modelValue: props.modelValue }"
     @submit="emit('submit')"
@@ -53,6 +62,22 @@ const schema = z.object({
 
   > div {
     width: 100%;
+  }
+}
+
+.country-search-form {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: 45px;
   }
 }
 </style>
