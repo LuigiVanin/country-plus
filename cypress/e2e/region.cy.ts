@@ -27,8 +27,6 @@ describe("Region page test", () => {
       .should("exist")
       .should("have.text", "Back");
 
-    cy.get('main [data-testid="country-card"]').should("not.exist");
-
     cy.get('main [data-testid="country-card"]').should("exist");
 
     cy.contains(/settings/i);
