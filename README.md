@@ -85,7 +85,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ## Run Test 🧪 
 
-> [!warn]
+> [!warning]
 > The cypress tests were all mode using chrome base browser as target.
 
 Running tests in development mode and open cypress GUI
