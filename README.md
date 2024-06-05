@@ -103,6 +103,10 @@ to run in production mode and only using the terminal use the following command:
 pnpm cy:ci:run
 ```
 
+To run tests using docker use the following command with docker cli:
+```bash
+docker build -t cypress_tests . && docker run cypress_tests
+```
 
 
 ## Tools 🛠️

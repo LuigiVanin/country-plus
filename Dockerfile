@@ -9,4 +9,4 @@ RUN pnpm install
 
 COPY . .
 
-CMD ["npm", "run", "cy:ci:run"]
+CMD ["pnpm", "run", "cy:ci:run"]
