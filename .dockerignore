@@ -2,3 +2,5 @@
 .output/
 .vscode/
 node_modules/
+
+.env
