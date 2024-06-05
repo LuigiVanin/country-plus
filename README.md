@@ -45,12 +45,6 @@ npm install
 
 # pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server 🚀
@@ -63,12 +57,6 @@ npm run dev
 
 # pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production 🚀
@@ -81,12 +69,6 @@ npm run build
 
 # pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
@@ -97,19 +79,16 @@ npm run preview
 
 # pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## Run Test 🧪 
 
-Running tests in development mode
+> [!warning]
+> The cypress tests were all mode using chrome base browser as target.
+
+Running tests in development mode and open cypress GUI
 
 ```bash
 #npm
@@ -117,15 +96,14 @@ npm run cy:dev
 
 # pnpm
 pnpm cy:dev
-
-# yarn
-yarn cy:dev
-
-# bun
-bun run cy:dev
 ```
 
-<< 🚧WIP🚧 >>
+to run in production mode and only using the terminal use the following command:
+```bash
+pnpm cy:ci:run
+```
+
+
 
 ## Tools 🛠️
 

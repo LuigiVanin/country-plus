@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Chart } from "chart.js/auto";
+import type { Country } from "~/types/country";
 
 type CountryBubbleChartProps = {
   countries?: Country[];
@@ -213,6 +214,7 @@ watch(isDark, () => {
       <template #panel="{ close }">
         <UCard
           class="relative h-64 w-72 bg-white dark:bg-zinc-900"
+          data-testid="chart-settings-panel"
           :ui="{
             header: { padding: 'sm:px-3 py-4' },
             body: { padding: 'sm:px-3 sm:py-4' },

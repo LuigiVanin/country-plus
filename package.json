@@ -8,10 +8,13 @@
     "generate": "nuxt generate",
     "start": "nuxt start",
     "preview": "nuxt preview",
+    "deploy": "pnpm build && pnpm start",
     "postinstall": "nuxt prepare",
     "mod:add": "pnpx nuxi@latest module add",
     "cy:open": "cypress open",
-    "cy:dev": "start-server-and-test dev http://localhost:3000 cy:open"
+    "cy:dev": "start-server-and-test dev http://localhost:3000 cy:open",
+    "cy:run": "cypress run --browser chrome",
+    "cy:ci:run": "start-server-and-test deploy http://localhost:3000 cy:run"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",

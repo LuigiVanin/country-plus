@@ -40,3 +40,9 @@ Cypress.Commands.add(
     cy.wait(`@fetchFrom${language}`);
   },
 );
+
+Cypress.Commands.add("interceptSearch", (search: string, fixture: string) => {
+  cy.intercept("GET", `https://restcountries.com/v3.1/name/${search}`, {
+    fixture: fixture ?? `americas-countries.json`,
+  }).as(`fetchFromSearch`);
+});

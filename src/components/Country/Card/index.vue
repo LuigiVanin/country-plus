@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { twMerge } from "tailwind-merge";
+import type { Country } from "~/types/country";
 
 type CountryItemProps = {
   data: Country;
@@ -26,6 +27,7 @@ const props = defineProps<CountryItemProps>();
       ring: 'dark:ring-gray-600',
       divide: ' dark:divide-gray-600',
     }"
+    data-testid="country-card"
   >
     <template #header>
       <div>
